@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/styles/index.scss";
-#targetConteiner{
+#targetOffer{
     position: absolute;
     left: 0;
     right: 0;

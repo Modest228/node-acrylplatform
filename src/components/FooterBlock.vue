@@ -15,14 +15,14 @@
                 <v-col>
                     <div class="footerSocialBlock">
                         <div class="logo-footer d-flex align-end gridLogo">
-                            <img src="/img/acryl-logo-white.svg" alt="logo-acryl">
+                            <a href="#topTarget"><img src="/img/acryl-logo-white.svg" alt="logo-acryl"></a>
                         </div>
                         <div class="address gridAddress">
                             <div class="d-flex addressSection">
                                 <p>{{addressItems.city}}</p>
                                 <p>{{addressItems.address}}</p>
-                                <p><b>{{addressItems.number}}</b></p>
-                                <p>{{addressItems.email}}</p>
+                                <p><b><a :href="`tel:${addressItems.numberLink}`">{{addressItems.number}}</a></b></p>
+                                <p><a :href="`mailto:${addressItems.email}`">{{addressItems.email}}</a></p>
                             </div>
                         </div>
                         <div class="gridSocial">
@@ -130,6 +130,13 @@ export default {
                     color: white;
                     padding: 0;
                     margin: 0;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }

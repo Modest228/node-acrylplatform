@@ -2,7 +2,7 @@
     <section class="project-info-block mxw1200">
         <div id="targetInfo"></div>
         <v-container>
-            <v-row class="height100">
+            <v-row class="">
                 <v-col cols="12" sm="5">
                     <div class="mapImage"></div>
                 </v-col>
@@ -63,7 +63,7 @@ export default {
         min-height: 250px;
         @include respond-to(medium-screens) { 
             max-height: 500px;
-            min-height: 500px;
+            min-height: 410px;
         }
         height: 100%;
         background-position: top center;

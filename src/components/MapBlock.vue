@@ -5,8 +5,8 @@
                 <v-col class="d-flex addressSection">
                     <p>{{addressItems.city}}</p>
                     <p>{{addressItems.address}}</p>
-                    <p>{{addressItems.number}}</p>
-                    <p>{{addressItems.email}}</p>
+                    <p><b><a :href="`tel:${addressItems.numberLink}`">{{addressItems.number}}</a></b></p>
+                    <p><a :href="`mailto:${addressItems.email}`">{{addressItems.email}}</a></p>
                 </v-col>
             </v-row>
         </v-container>
@@ -46,6 +46,13 @@ export default {
                     color: white;
                     padding: 0;
                     margin: 0 20px 0 0;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }

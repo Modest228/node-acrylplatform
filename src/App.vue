@@ -8,7 +8,7 @@
             <v-list-item-content>
               <v-list-item-title class="title">
                 <div class="logotype">
-                  <img class="vert-center widthMobil" src='/img/Acryl-Logo.svg' alt="acryl-logo"/>
+                  <a href="#topTarget"><img class="vert-center widthMobil" src='/img/Acryl-Logo.svg' alt="acryl-logo"/></a>
                 </div>
               </v-list-item-title>
             </v-list-item-content>
@@ -19,7 +19,7 @@
               <v-list-item>
                 <v-list-item-content>
                   <v-list-item-title class="title">
-                      <a href={item.link} class="elHover">{{item.text}}</a>
+                      <a :href="`${item.link}`" class="elHover" :target="`${item.target}`">{{item.text}}</a>
                   </v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
@@ -55,7 +55,7 @@
     <device-info-block></device-info-block>
     <calc-block></calc-block>
     <how-it-work-block></how-it-work-block>
-    <faq-block></faq-block>
+    <faq-block :addressItems="addressItems"></faq-block>
     <form-block></form-block>
     <map-block :addressItems="addressItems"></map-block>
     <footer-block :footer-items="menuItems" :addressItems="addressItems"></footer-block>
