@@ -9,18 +9,24 @@
                         <v-text-field
                             v-model="name"
                             label="Имя"
+                            name="name"
                             required></v-text-field>
                         <v-text-field
                             v-model="email"
-                            :rules="emailRules"
+                            name="email"
                             label="Электронная почта"
                             required></v-text-field>
                         <v-text-field
                             v-model="phone"
                             label="Телефон"
+                            name="phone"
                             required></v-text-field>
                         <div class="d-flex align-center ">
-                            <v-btn rounded color="primary secondaryColor">Заказать</v-btn>
+                            <v-btn rounded color="primary secondaryColor" @click="formSend()">Заказать</v-btn>
+                        </div>
+                        <div class="responseError">
+                            <p class="errorMessage" v-if='errorMessage'>{{errorMessage}}</p>
+                            <p class="response" v-if='response'>{{response}}</p>
                         </div>
                     </div>
                 </v-col>
@@ -30,6 +36,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'FormBlock',
   data(){
@@ -43,8 +51,44 @@ export default {
                 v => !!v || 'E-mail is required',
                 v => /.+@.+/.test(v) || 'E-mail must be valid',
             ],
+            response: '',
+            errorMessage: ''
       }
-  }
+  },
+    methods: {
+        formSend: function() {
+            if (this.name == '' || this.phone == '' || this.email == '') {
+                console.log("Запони все поля")
+                this.errorMessage = 'Заполните все поля'
+                this.response = ''
+            } else {
+                let formData = new FormData();
+                formData.append('fields[name_1]', this.name)
+                formData.append('fields[543953_1][907777]', this.phone)
+                formData.append('fields[543955_1][907789]', this.email)
+                formData.append('form_id', "585211")
+                formData.append('hash', "9b47fca870a99ee10cbd330676441105")
+
+                axios.post('https://forms.amocrm.ru/queue/add', formData, { })
+                .then((response) => {
+                    console.log("response", response)
+                    this.errorMessage = ''
+                    this.response = 'Мы с вами свяжемся в ближайшее время'
+                    this.name = ''
+                    this.phone = ''
+                    this.email = ''
+                })
+                .catch((error) => {
+                    console.log(error);
+                    this.errorMessage = ''
+                    this.response = 'Мы с вами свяжемся в ближайшее время'
+                    this.name = ''
+                    this.phone = ''
+                    this.email = ''
+                });
+            }
+        },
+    }
 }
 </script>
 
@@ -79,6 +123,15 @@ export default {
     }
     .maxWidth{
         max-width: 320px;
+    }
+    .responseError{
+        padding-top: 10px;
+        .errorMessage{
+            color: red;
+        }
+        .response{
+            color: $secondaryColor;
+        }
     }
 }
 

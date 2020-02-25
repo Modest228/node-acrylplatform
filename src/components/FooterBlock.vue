@@ -4,7 +4,7 @@
             <v-row class="d-flex rowMenuItems">
                 <div class="d-none d-md-flex">
                     <div class="d-flex align-center pr-3" v-for="(item, i) in getFooterItems" :key="`footerItem${i}`">
-                        <a :href="`${item.link}`" class="elHover" :target="`${item.target}`">{{item.text}}</a>
+                        <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener">{{item.text}}</a>
                     </div>
                 </div>
                 <div class="d-flex align-center pl-3">
@@ -27,7 +27,7 @@
                         </div>
                         <div class="gridSocial">
                             <div class="social">
-                                <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank"> 
+                                <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener"> 
                                     <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
                                 </a>
                             </div>

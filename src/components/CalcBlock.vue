@@ -9,8 +9,8 @@
                 </v-row>
                 <v-row class="formNodeCount">
                     <v-col cols="12" xs="12" sm="12" md="4" class="maxWidth320 CountNodeHead px-3">
-                        <span>{{countNodeHead}}</span>
-                        <input class="formNodeCountInput" type="text" :value="`${countNode}`" disabled/>
+                        <label for="formNodecountNode">{{countNodeHead}}</label>
+                        <input id="formNodecountNode" class="formNodeCountInput" name="countNode" type="text" :value="`${countNode}`" disabled/>
                         <v-slider
                             v-model="countNode"
                             track-color="grey"
@@ -22,8 +22,8 @@
                         </v-slider>
                     </v-col>
                     <v-col cols="12" xs="12" sm="12" md="4" class="maxWidth320 CountMonthHead px-3">
-                        <span>{{countMonthHead}}</span>
-                        <input class="formNodeCountInput" type="text" :value="`${countMonth}`" disabled/>
+                        <label for="formNodecountMonth">{{countMonthHead}}</label>
+                        <input id="formNodecountMonth" class="formNodeCountInput" name="countMonth" type="text" :value="`${countMonth}`" disabled/>
                         <v-slider
                             v-model="countMonth"
                             track-color="grey"
@@ -35,8 +35,8 @@
                         </v-slider>    
                     </v-col>
                     <v-col cols="12" md="4" class="maxWidth320 IncomeHead px-3">
-                        <span>{{incomeHead}}</span>
-                        <input class="formNodeCountInput" type="text" :value="`$${income}`" />
+                        <label for="formNodeincome">{{incomeHead}}</label>
+                        <input id="formNodeincome" class="formNodeCountInput" name="income" type="text" :value="`$${income}`" />
                     </v-col>
                 </v-row>
             </v-container>
@@ -99,7 +99,7 @@ export default {
         .CountNodeHead{
             text-align: center;
             width: 100%;
-            span{
+            label{
                 padding: 10px 0;
             }
             .formNodeCountInput{
@@ -119,7 +119,7 @@ export default {
         .CountMonthHead{
             text-align: center;
             width: 100%;
-            span{
+            label{
                 padding: 10px 0;
             }
             .formNodeCountInput{
@@ -139,7 +139,7 @@ export default {
         .IncomeHead{
             text-align: center;
             width: 100%;
-            span{
+            label{
                 padding: 10px 0;
             }
             .formNodeCountInput{

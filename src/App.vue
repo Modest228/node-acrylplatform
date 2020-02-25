@@ -19,7 +19,7 @@
               <v-list-item>
                 <v-list-item-content>
                   <v-list-item-title class="title">
-                      <a :href="`${item.link}`" class="elHover" :target="`${item.target}`">{{item.text}}</a>
+                      <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener">{{item.text}}</a>
                   </v-list-item-title>
                 </v-list-item-content>
               </v-list-item>

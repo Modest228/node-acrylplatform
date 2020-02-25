@@ -90,7 +90,7 @@ export default {
                 font-weight: bold;
                 font-size: 62px;
                 line-height: 76px;
-                color: $primaryColor;
+                color: #FFD900;
             }
             .describe{
                 font-weight: 500;

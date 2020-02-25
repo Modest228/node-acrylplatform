@@ -14,14 +14,14 @@
                 <a href="tel:88005113715" class="disPrimary">8 (800) 511-37-15</a>
               </div>
               <div class="d-flex align-center pr-3" v-for="(item, i) in getmenuItems" :key="`menuItem${i}`">
-                <a :href="`${item.link}`" class="elHover" :target="`${item.target}`">{{item.text}}</a>
+                <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener">{{item.text}}</a>
               </div>
               <div class="d-flex align-center pl-3">
                 <v-btn rounded color="primary secondaryColor" small href="#targetOffer">Заказать</v-btn>
               </div>
             </v-toolbar-items>
           </div>
-          <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="handleDrawer"></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="handleDrawer" name="menuDrawer" aria-label="menuDrawer" ></v-app-bar-nav-icon>
         </div>
       </v-container>
     </v-app-bar>
@@ -69,7 +69,7 @@ export default {
   }
 }
 .disPrimary{
-  color: grey !important;
+  color: #3C3C40 !important;
   text-decoration: none;
   vertical-align: middle;
   font-weight: 300;
