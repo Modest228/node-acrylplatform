@@ -53,6 +53,7 @@
     <main-block></main-block>
     <project-info-block></project-info-block>
     <device-info-block></device-info-block>
+    <instruction-block></instruction-block>
     <calc-block></calc-block>
     <how-it-work-block></how-it-work-block>
     <faq-block :addressItems="addressItems"></faq-block>
@@ -67,6 +68,7 @@ import AppHeader from '@/components/AppHeader'
 import MainBlock from '@/components/MainBlock'
 import ProjectInfoBlock from '@/components/ProjectInfoBlock'
 import DeviceInfoBlock from '@/components/DeviceInfoBlock'
+import InstructionBlock from '@/components/InstructionBlock'
 import CalcBlock from '@/components/CalcBlock'
 import HowItWorkBlock from '@/components/HowItWorkBlock'
 import FaqBlock from '@/components/FaqBlock'
@@ -82,6 +84,7 @@ export default {
     MainBlock,
     ProjectInfoBlock,
     DeviceInfoBlock,
+    InstructionBlock,
     CalcBlock,
     HowItWorkBlock,
     FaqBlock,
