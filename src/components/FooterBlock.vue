@@ -1,45 +1,92 @@
 <template>
     <section id="contacts" class="footer-block">
         <v-container class="Container mxw1200">
-            <v-row class="d-flex rowMenuItems">
-                <div class="d-none d-md-flex">
-                    <div class="d-flex align-center pr-3" v-for="(item, i) in getFooterItems" :key="`footerItem${i}`">
-                        <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener">{{item.text}}</a>
-                    </div>
-                </div>
-                <div class="d-flex align-center pl-3">
-                    <v-btn rounded color="primary secondaryColor"  href="#targetOffer">Заказать</v-btn>
-                </div>
-            </v-row>
             <v-row>
-                <v-col>
-                    <div class="footerSocialBlock">
-                        <div class="logo-footer d-flex align-end gridLogo">
-                            <a href="#topTarget"><img src="/img/acryl-logo-white.svg" alt="logo-acryl"></a>
-                        </div>
-                        <div class="address gridAddress">
-                            <div class="d-flex addressSection">
-                                <p>{{addressItems.city}}</p>
-                                <p>{{addressItems.address}}</p>
-                                <p><b><a :href="`tel:${addressItems.numberLink}`">{{addressItems.number}}</a></b></p>
-                                <p><a :href="`mailto:${addressItems.email}`">{{addressItems.email}}</a></p>
-                            </div>
-                        </div>
-                        <div class="gridSocial">
-                            <div class="social">
-                                <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener"> 
-                                    <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
-                                </a>
-                            </div>
-                        </div>
+                <v-col cols='12' sm='6' lg='3'>
+                    <h4>{{head1}}</h4>
+                    <div class="directions">
+                        <a v-for="(direction, i) in directions" :key="`direction${i}`" :href="`${direction.link}`" target="_blank"><img  :src="`/img/directions/${direction.img}.svg`"></a>
+                    </div>
+                </v-col>
+                <v-col cols='12' sm='6' lg='3'>
+                    <h4>{{head2}}</h4>
+                    <div class="menu">
+                        <a v-for="(menuItem, i) in footerItems" :key="`menuItem${i}`" :href="`${menuItem.link}`">
+                            {{menuItem.text}}
+                        </a>
+                        <a href="#targetOffer">
+                            Заказать
+                        </a>
+                    </div>                    
+                </v-col>
+                <v-col cols='12' sm='6' lg='3'>
+                    <h4>{{head3}}</h4>
+                    <div class="address">
+                        <p><b><a :href="`tel:${addressItems.numberLink}`">{{addressItems.number}}</a></b></p>
+                        <p><b><a :href="`mailto:${addressItems.email}`">{{addressItems.email}}</a></b></p>
+                        <p class="op07">{{addressItems.city}}</p>
+                        <p class="op07">{{addressItems.address}}</p>
+                    </div>                    
+                </v-col>
+                <v-col cols='12' sm='6' lg='3'>
+                    <h4>{{head4}}</h4>
+                    <div class="subscription">
+                        <v-text-field
+                            dark
+                            v-model="email"
+                            label="E-mail"
+                            required
+                        ></v-text-field>
+                        <v-checkbox
+                            dark
+                            v-model="agreeCheck"
+                            :label="`${agreeCheckLabel}`"
+                        ></v-checkbox>
+                        <v-btn rounded outlined dark @click="formSubSend()">Отправить</v-btn>
+                    </div>                    
+                </v-col>
+            </v-row>
+            <v-row class="bottomFooterBlock">
+                <v-col cols='12' sm='6' lg='3'>
+                    <div class="directions">
+                        <a href="#topTarget"><img src="/img/directions/acryl-logo-white.svg"></a>
+                    </div>
+                </v-col>
+                <v-col cols='12' sm='6' lg='3'>
+                    <div class="polit">
+                        <a href="#polit1">Privacy Policy</a>
+                        <a href="#polit2">Cookie Policy</a>
+                    </div>
+                </v-col>
+                <v-col cols='12' sm='6' lg='3' offset-lg="3">
+                    <div class="social">
+                        <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener"> 
+                            <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
+                        </a>
                     </div>
                 </v-col>
             </v-row>
         </v-container>
+
+        <div class='modalOpen' v-if="modalTrue">
+            <div class="modalCards">
+                <v-card
+                class="modalCard"
+                max-width="344"
+                max-height="344"
+                outlined
+                >
+                <p>{{textError}}</p>
+                <v-btn rounded outlined @click="reversModal()">Закрыть</v-btn>
+                </v-card>
+            </div>
+        </div>
+        
     </section>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'FooterBlock',
   props: ['footerItems', 'addressItems'],
@@ -50,99 +97,158 @@ export default {
   },
   data(){
       return {
+          head1: "Направления",
+          directions: [
+              {id: 1, img: "Logo_ACRYL_Platform", link: "https://acrylplatform.com/"},
+              {id: 2, img: "Logo_ACRYL_1C_Integration", link: "https://1c.acrylplatform.com/"},
+              {id: 3, img: "Logo_ACRYL_CDN", link: "https://cdn.acrylplatform.com/"},
+          ],
+          head2: "Меню",
+          head3: "Контакты",
+          head4: "Подписывайтесь на обновления",
           iconItems: [
               {id: 1, icon: "ins", link: "https://www.instagram.com/acrylplatformofficial/"},
               {id: 2, icon: "fb", link: "https://www.facebook.com/acrylplatformofficial"},
               {id: 3, icon: "tw", link: "https://twitter.com/acrylplatform"},
               {id: 4, icon: "vk", link: "https://vk.com/acrylplatform"},
               {id: 5, icon: "tg", link: "https://t.me/Acrylplatform"},
-          ]
+          ],
+          email: '',
+          agreeCheckLabel: `Я согласен на обработку персональных данных`,
+          agreeCheck: false,
+          modalTrue: false,
+          textError: ''
       }
-  }
+  },
+  methods: {
+        formSubSend: function() {
+            let formData = new FormData();
+            formData.append('entry.2123031748', this.email);
+            if(this.agreeCheck){
+                axios.post('https://docs.google.com/forms/d/e/1FAIpQLSfSqsAZL0CRuD_gkMFBjzkORI7KNZlKj4MUh6QG86jVinu76w/formResponse', formData, { })
+                    .then((response) => {
+                        console.log("response", response);
+                        this.email = '';
+                        this.modalTrue = true;
+                        this.textError = 'Форма успешно отправлена';
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                        this.email = '';
+                        this.modalTrue = true;
+                        this.textError = 'Форма успешно отправлена';
+                });
+            }else{
+                this.modalTrue = true;
+                this.textError = 'Вы не согласились с обработкой персональных данных';
+            }
+        },
+        reversModal: function() {
+            this.modalTrue = !this.modalTrue;
+            this.textError = ''
+        }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/styles/index.scss";
 .footer-block{
-    display: flex;
-    width: 100%;
-    padding: 20px 10px;
-    height: 425px;
+    color: white;
     background-color: $secondaryColor;
-    .Container{
+    h4{
+        opacity: 0.7;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 300;
+    }
+    .directions{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-content: space-between;
-    }
-    .gridLogo{ 
-        grid-area: gridLogo;
-        justify-content: center;
-        @include respond-to(large-screens) { justify-content: flex-start;}
-    }
-    .gridAddress{ 
-        grid-area: gridAddress; 
-        display: flex; 
-        justify-content: center;
-        align-items: flex-end;
-        @include respond-to(large-screens) {justify-content: flex-end;}
-    }
-    .gridSocial{ 
-        grid-area: gridSocial; 
-        display: flex; 
-        justify-content: center; 
-        align-items: flex-end;
-    }
-    .rowMenuItems{
-        justify-content: center;
-        margin: 20px 10px;
-        @include respond-to(large-screens) { 
-            justify-content: space-between;
-        }
-        .elHover{
-            color: white !important;
+        align-items: flex-start;
+        margin: 20px 0;
+        img{
+            height: 20px; 
+            margin: 10px 0;
         }
     }
-    .footerSocialBlock{
-        display: grid;
-        grid-gap: 30px;
-        grid-template-areas: 
-            "gridLogo gridLogo gridLogo"
-            "gridAddress gridAddress gridAddress"
-            "gridSocial gridSocial gridSocial";
-        @include respond-to(large-screens) {
-            grid-template-areas: 
-                "gridLogo gridSocial gridAddress";       
+    .menu{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        a{
+            color: white;
+            text-decoration: none;
+            &:hover{text-decoration: underline;}
         }
-        .address{
-            .addressSection{
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-top: 20px;
-                @include respond-to(large-screens) { 
-                    align-items: flex-end;
-                    justify-content: flex-end;
-                }
-                p{
-                    text-align: center;
-                    color: white;
-                    padding: 0;
-                    margin: 0;
-                }
-                a{
-                    color: white;
-                    text-decoration: none;
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                }
+    }
+    .address{
+        margin: 20px 0;
+        p{
+            padding: 0;
+            margin: 0;
+            &.op07{
+                opacity: 0.7;
             }
         }
-        .social{
-            a{margin: 45px 10px 10px;}
+        a{
+            color: white;
+            text-decoration: none;
+            &:hover{text-decoration: underline;}
         }
     }
+    .subscription{
+        margin: 20px 0;
+        max-width: 300px;
+        .fieldSub{
+            color: white;
+        }
+    }
+    .polit{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        a{
+            color: white;
+            text-decoration: none;
+            margin: 0 10px 0 0;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            &:hover{text-decoration: underline;}
+        }
+    }
+    .social{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        a{margin: 0 20px 0 0;}
+    }
+}
+.modalOpen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  .modalCards{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .modalCard{
+        margin: 25% auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        p{
+            text-align: center;
+        }
+    }
+  }
 }
 </style>

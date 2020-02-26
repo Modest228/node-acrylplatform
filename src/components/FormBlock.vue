@@ -24,14 +24,24 @@
                         <div class="d-flex align-center ">
                             <v-btn rounded color="primary secondaryColor" @click="formSend()">Заказать</v-btn>
                         </div>
-                        <div class="responseError">
-                            <p class="errorMessage" v-if='errorMessage'>{{errorMessage}}</p>
-                            <p class="response" v-if='response'>{{response}}</p>
-                        </div>
                     </div>
                 </v-col>
             </v-row>
         </v-container>
+        <div class='modalOpen' v-if="modalTrue">
+            <div class="modalCards">
+                <v-card
+                class="modalCard"
+                max-width="344"
+                max-height="344"
+                outlined
+                >
+                <p class="errorMessage" v-if='errorMessage'>{{errorMessage}}</p>
+                <p class="response" v-if='response'>{{response}}</p>    
+                <v-btn rounded outlined @click="reversModal()">Закрыть</v-btn>
+                </v-card>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -52,15 +62,17 @@ export default {
                 v => /.+@.+/.test(v) || 'E-mail must be valid',
             ],
             response: '',
-            errorMessage: ''
+            errorMessage: '',
+            modalTrue: false
       }
   },
     methods: {
         formSend: function() {
             if (this.name == '' || this.phone == '' || this.email == '') {
-                console.log("Запони все поля")
+                // console.log("Запони все поля")
                 this.errorMessage = 'Заполните все поля'
                 this.response = ''
+                this.modalTrue = true;
             } else {
                 let formData = new FormData();
                 formData.append('fields[name_1]', this.name)
@@ -74,6 +86,7 @@ export default {
                     console.log("response", response)
                     this.errorMessage = ''
                     this.response = 'Мы с вами свяжемся в ближайшее время'
+                    this.modalTrue = true;
                     this.name = ''
                     this.phone = ''
                     this.email = ''
@@ -82,12 +95,18 @@ export default {
                     console.log(error);
                     this.errorMessage = ''
                     this.response = 'Мы с вами свяжемся в ближайшее время'
+                    this.modalTrue = true;
                     this.name = ''
                     this.phone = ''
                     this.email = ''
                 });
             }
         },
+        reversModal: function() {
+            this.modalTrue = !this.modalTrue;
+            this.errorMessage = '';
+            this.response = ''
+        }
     }
 }
 </script>
@@ -134,5 +153,30 @@ export default {
         }
     }
 }
-
+.modalOpen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  .modalCards{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .modalCard{
+        margin: 25% auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        p{
+            text-align: center;
+        }
+    }
+  }
+}
 </style>

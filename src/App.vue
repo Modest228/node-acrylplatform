@@ -40,7 +40,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title class="title">
-                  <v-btn rounded color="primary secondaryColor" small href="#targetConteiner">Заказать</v-btn>
+                  <v-btn rounded color="primary secondaryColor" small href="#targetOffer">Заказать</v-btn>
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -96,7 +96,7 @@ export default {
   data() {
     return {
       menuItems: [
-        {id: 1, text: "Магазин", link: "https://shop.acrylminer.com/ru/", target: "_blank"},
+        // {id: 1, text: "Магазин", link: "https://shop.acrylminer.com/ru/", target: "_blank"},
         {id: 2, text: "Описание", link: "#targetInfo", target: "_self"},
         {id: 3, text: "Поддержка", link: "https://support.acrylminer.com/l_rus/", target: "_blank"},
         {id: 4, text: "Блог", link: "https://medium.com/acrylplatformru", target: "_blank"},
