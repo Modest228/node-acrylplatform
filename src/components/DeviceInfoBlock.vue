@@ -13,7 +13,7 @@
                     <div class="advantagesBlock">
                         <v-row>
                             <v-col v-for="(item, i) in advantages" :key="`advantageItem${i}`" :class="`advantageItem grid${item.id}`" cols="12" md="6">
-                                <img class="icon" :src="`/img/${item.icon}.webp`" :alt="`${item.icon}`">
+                                <img class="icon" :src="`/img/${item.icon}.png`" :alt="`${item.icon}`">
                                 <span class="describe">{{item.describe}}</span>
                             </v-col>
                         </v-row>

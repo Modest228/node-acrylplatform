@@ -39,6 +39,14 @@
                         <input id="formNodeincome" class="formNodeCountInput" name="income" type="text" :value="`$${income}`" />
                     </v-col>
                 </v-row>
+                <v-row>
+                    <v-col class="checkBoxInput">
+                        <v-checkbox
+                        v-model="checkBoxInput"
+                        :label="`${checkBoxLabel.toString()}`"
+                        ></v-checkbox>
+                    </v-col>
+                </v-row>
             </v-container>
         </v-card>
     </section>
@@ -55,8 +63,8 @@ export default {
             countMonthHead: `Кол-во месяцев`,
                 countMonth: 12,
             incomeHead: `Доход`,
-            // checkBoxLabel: `Получать повышенный доход, сохраняя заработанные монеты на генерирующем балансе устройстве.`,
-            // checkBoxInput: false
+            checkBoxLabel: `Получать повышенный доход, сохраняя заработанные монеты на генерирующем балансе устройстве.`,
+            checkBoxInput: false
       }
   },
   computed: {
@@ -70,8 +78,15 @@ export default {
 
             let incomeOnMonth = INCOME_MONTH / COURSE_ACRYL; // Доходность одной ноды в месяц в акрилах
             
-            const res = incomeOnMonth * countNode * countMonth * COURSE_ACRYL;
-            return res.toFixed(0);
+            if(this.checkBoxInput){
+                //1.2737 * month*month + 138.4448 * month + 15.3828  -  Апроксимация графика доходности без снятия накопленной суммы
+                const res = 1.2737 * countMonth * countMonth + 138.4448 *countMonth + 15.3828;
+                return (res * countNode).toFixed(0);
+            }else{
+                const res = incomeOnMonth * countMonth * COURSE_ACRYL;
+                return (res * countNode).toFixed(0);
+            }
+            
         }
   },
 }
@@ -85,6 +100,10 @@ export default {
         border-radius: 20px !important; 
         padding-top: 30px;
         padding-bottom: 30px;
+        .checkBoxInput{
+            display: flex;
+            justify-content: center;
+        }
     }
     .headSection{
         text-align: center;

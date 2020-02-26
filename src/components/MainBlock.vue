@@ -4,8 +4,8 @@
                 <v-col cols-sm="8" offset-sm="1" sm="8" cols-md="12" offset-md="4">
                     <div class="btnHeaderBlock">
                         <div class="textHeaderBlock">
-                            <h1>Получай<br />стабильное<br />вознаграждение</h1>
-                            <p>Разместив персональный<br />дата-центр у себя в квартире!</p>
+                            <h1>Получай от 150$<br />в месяц</h1>
+                            <p>Разместив мини дата-центр<br /> у себя в квартире!</p>
                         </div>
                         <v-btn rounded color="primary secondaryColor" href="#targetInfo">Подробнее</v-btn>
                     </div>
