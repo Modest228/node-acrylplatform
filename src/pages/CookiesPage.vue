@@ -62,18 +62,18 @@ You may block cookies by activating the setting on your browser that allows you 
 <br /><br />
 Internet browsers allow you to change your cookie settings. These settings are usually found in the 'options' or 'preferences' menu of your internet browser. In order to understand these settings, the following links may be helpful. Otherwise you should use the 'Help' option in your internet browser for more details.
 <br /><br />
-• Cookie settings in Internet Explorer<br />
-• Cookie settings in Firefox<br />
-• Cookie settings in Chrome<br />
-• Cookie settings in Safari<br />
+<a href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies" style="color: #0E60FE;">• Cookie settings in Internet Explorer</a><br />
+<a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectlocale=en-US&redirectslug=enable-and-disable-cookies-website-preferences" style="color: #0E60FE;">• Cookie settings in Firefox</a><br />
+<a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=en" style="color: #0E60FE;">• Cookie settings in Chrome</a><br />
+<a href="https://support.apple.com/ru-ru/guide/safari/sfri11471/mac" style="color: #0E60FE;">• Cookie settings in Safari</a><br />
 <br /><br />
 If you wish to withdraw your consent at any time, you will need to delete your cookies using your internet browser settings.
 <br /><br />
 More information about cookies
 <br /><br />
-• Useful information about cookies, including information about deleting or blocking cookies, can be found at: <a href="https://www.allaboutcookies.org">https://www.allaboutcookies.org</a><br />
-• A guide to behavioral advertising and online privacy has been produced by the internet advertising industry which can be found at: <a href="http://www.youronlinechoices.com">http://www.youronlinechoices.com</a><br />
-• The UK Information Commissioner's Office (ICO) cookie guide can be found on the ICO website: <a href="https://ico.org.uk/your-data-matters/online/cookies/">https://ico.org.uk/your-data-matters/online/cookies/</a><br />
+• Useful information about cookies, including information about deleting or blocking cookies, can be found at: <a  style="color: #0E60FE;" href="https://www.allaboutcookies.org">https://www.allaboutcookies.org</a><br />
+• A guide to behavioral advertising and online privacy has been produced by the internet advertising industry which can be found at: <a style="color: #0E60FE;" href="http://www.youronlinechoices.com">http://www.youronlinechoices.com</a><br />
+• The UK Information Commissioner's Office (ICO) cookie guide can be found on the ICO website: <a  style="color: #0E60FE;" href="https://ico.org.uk/your-data-matters/online/cookies/">https://ico.org.uk/your-data-matters/online/cookies/</a><br />
 <br /><br />
 Contact Us<br />
 We hope the information in this policy provides you with clear information about the technologies we use and the purposes for which we use them, but it you have any additional questions, or require any additional information, please review our Privacy Policy or contact us at info@acrylplatform.com.`,
