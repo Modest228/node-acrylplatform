@@ -8,7 +8,7 @@
             <v-list-item-content>
               <v-list-item-title class="title">
                 <div class="logotype">
-                  <a href="#topTarget"><img class="vert-center widthMobil" src='/img/Acryl-Logo.svg' alt="acryl-logo"/></a>
+                  <router-link to="/"><img class="vert-center widthMobil" src='/img/Acryl-Logo.svg' alt="acryl-logo"/></router-link>
                 </div>
               </v-list-item-title>
             </v-list-item-content>
@@ -50,30 +50,16 @@
 
 
     <app-header :menu-items="menuItems" v-on:changeDrawer="changeDrawerReverse"></app-header>
-    <main-block></main-block>
-    <project-info-block></project-info-block>
-    <device-info-block></device-info-block>
-    <instruction-block></instruction-block>
-    <calc-block></calc-block>
-    <how-it-work-block></how-it-work-block>
-    <faq-block :addressItems="addressItems"></faq-block>
-    <form-block></form-block>
-    <map-block :addressItems="addressItems"></map-block>
+
+    <!-- PAGES BLOCKS  -->
+    <router-view></router-view>
+    
     <footer-block :footer-items="menuItems" :addressItems="addressItems"></footer-block>
   </v-app>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader'
-import MainBlock from '@/components/MainBlock'
-import ProjectInfoBlock from '@/components/ProjectInfoBlock'
-import DeviceInfoBlock from '@/components/DeviceInfoBlock'
-import InstructionBlock from '@/components/InstructionBlock'
-import CalcBlock from '@/components/CalcBlock'
-import HowItWorkBlock from '@/components/HowItWorkBlock'
-import FaqBlock from '@/components/FaqBlock'
-import FormBlock from '@/components/FormBlock'
-import MapBlock from '@/components/MapBlock'
 import FooterBlock from '@/components/FooterBlock'
 
 export default {
@@ -81,15 +67,6 @@ export default {
 
   components: {
     AppHeader,
-    MainBlock,
-    ProjectInfoBlock,
-    DeviceInfoBlock,
-    InstructionBlock,
-    CalcBlock,
-    HowItWorkBlock,
-    FaqBlock,
-    FormBlock,
-    MapBlock,
     FooterBlock
   },
 
@@ -102,13 +79,6 @@ export default {
         {id: 4, text: "Блог", link: "https://medium.com/acrylplatformru", target: "_blank", click: "Sublit_Blog1"},
         {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"} 
       ],
-      // footerItems: [
-      //   {id: 1, text: "Магазин", link: "https://shop.acrylminer.com/ru/", target: "_blank"},
-      //   {id: 2, text: "Описание", link: "#targetInfo", target: "_self"},
-      //   {id: 3, text: "Поддержка", link: "https://support.acrylminer.com/l_rus/", target: "_blank"},
-      //   {id: 4, text: "Блог", link: "https://medium.com/acrylplatformru", target: "_blank"},
-      //   {id: 5, text: "Контакты", link: "#contacts", target: "_self"},
-      // ],
       drawer: false,
       addressItems: {
         city: "г.Новосибирск",
@@ -145,9 +115,6 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-content: space-between;
-    .topBlock{
-
-    }
     .bottomBlock{
       .noDecoration{
         text-decoration: none;

@@ -4,7 +4,7 @@
         <div class="display1200 h-100">
           <v-toolbar-title>
             <div class="logotype">
-              <a href="#topTarget"><img class="vert-center widthMobil" src='/img/Acryl-Logo.svg' alt="acryl-logo"/></a>
+              <router-link to="/"><img class="vert-center widthMobil" src='/img/Acryl-Logo.svg' alt="acryl-logo"/></router-link>
             </div>
           </v-toolbar-title>
           <v-spacer></v-spacer>

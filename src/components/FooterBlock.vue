@@ -39,13 +39,12 @@
                             dark
                             v-model="email"
                             label="E-mail"
-                            required
-                        ></v-text-field>
-                        <v-checkbox
-                            dark
-                            v-model="agreeCheck"
-                            :label="`${agreeCheckLabel}`"
-                        ></v-checkbox>
+                            required ></v-text-field>
+                        <v-checkbox dark v-model="agreeCheck" >
+                            <template v-slot:label>
+                                <span @click.stop class="agreeCheckLabel" v-html="agreeCheckLabel"></span>
+                            </template>
+                        </v-checkbox>
                         <v-btn rounded outlined dark @click="formSubSend()">Отправить</v-btn>
                     </div>                    
                 </v-col>
@@ -58,15 +57,30 @@
                 </v-col>
                 <v-col cols='12' sm='6' lg='3'>
                     <div class="polit">
-                        <a href="#polit1">Privacy Policy</a>
-                        <a href="#polit2">Cookie Policy</a>
+                        <router-link to="/privacy">Privacy Policy</router-link>
+                        <router-link to="/cookie">Cookie Policy</router-link>
                     </div>
                 </v-col>
-                <v-col cols='12' sm='6' lg='3' offset-lg="3">
+                <v-col cols='12' sm='6' lg='3'>
                     <div class="social">
                         <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`"> 
                             <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
                         </a>
+                    </div>
+                </v-col>
+                <v-col cols='12' sm='6' lg='3'>
+                    <div class="copyright">
+                        <p>© 2020 - ACRYL RUS, LLC.</p>
+                        <div class="tooltip">
+                            <v-tooltip top max-width="300" color="black">
+                                <template v-slot:activator="{ on }">
+                                    <span class="tooltipSpan" v-on="on">Все права защищены, 18+</span>
+                                </template>
+                                <span>
+                                    Все материалы данного сайта являются объектами авторского права (в том числе дизайн). Запрещается копирование, распространение или любое иное использование материалов сайта без предварительного согласия правообладателя. Нарушение авторских прав может влечь гражданско-правовую, административную и/или уголовную ответственность.
+                                </span>
+                            </v-tooltip>
+                        </div>
                     </div>
                 </v-col>
             </v-row>
@@ -118,7 +132,14 @@ export default {
               {id: 5, icon: "tg", link: "https://t.me/Acrylplatform", click: "Submit_TG"},
           ],
           email: '',
-          agreeCheckLabel: `Я согласен на обработку персональных данных`,
+          agreeCheckLabel: `
+            Нажимая кнопку «Отправить», я даю
+            согласие на обработку своих
+            персональных данных в соответствии с
+            <a href="/#/privacy">Политикой конфиденциальности</a>, а также
+            соглашаюсь получать информацию о
+            скидках и специальных предложениях на
+            указанный e-mail и телефон.`,
           agreeCheck: false,
           modalTrue: false,
           textError: ''
@@ -347,6 +368,10 @@ export default {
     .subscription{
         margin: 20px 0;
         max-width: 300px;
+        .v-input{
+            margin: 0;
+            padding: 0;
+        }
         .fieldSub{
             color: white;
         }
@@ -371,6 +396,25 @@ export default {
         height: 100%;
         a{margin: 0 20px 0 0;}
     }
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        height: 100%;
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        a{margin: 0 20px 0 0;}  
+    }
+}
+.agreeCheckLabel{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 12px;
 }
 .modalOpen{
   position: fixed;
