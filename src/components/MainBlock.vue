@@ -7,7 +7,7 @@
                             <h1>Получай от 150$<br />в месяц</h1>
                             <p>Разместив мини дата-центр<br /> у себя в квартире!</p>
                         </div>
-                        <v-btn rounded color="primary secondaryColor" href="#targetInfo">Подробнее</v-btn>
+                        <v-btn rounded color="primary secondaryColor" href="#targetInfo" @click="Click_more()">Подробнее</v-btn>
                     </div>
                 </v-col>
             </v-row>
@@ -18,6 +18,13 @@
 <script>
 export default {
   name: 'HeaderBlock',
+  methods: {
+    Click_more(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Click_more");
+      window.yaSendButton("Click_more");
+    }
+  }
 }
 </script>
 

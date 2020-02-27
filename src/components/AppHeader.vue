@@ -11,13 +11,13 @@
           <div class="hidden-sm-and-down h-100">
             <v-toolbar-items>
               <div class="d-flex align-center pr-3">
-                <a href="tel:88005113715" class="disPrimary">8 (800) 511-37-15</a>
+                <a href="tel:88005113715" class="disPrimary" @click="Submit_tel1()">8 (800) 511-37-15</a>
               </div>
               <div class="d-flex align-center pr-3" v-for="(item, i) in getmenuItems" :key="`menuItem${i}`">
-                <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener">{{item.text}}</a>
+                <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`">{{item.text}}</a>
               </div>
               <div class="d-flex align-center pl-3">
-                <v-btn rounded color="primary secondaryColor" small href="#targetOffer">Заказать</v-btn>
+                <v-btn rounded color="primary secondaryColor" small href="#targetOffer" @click="Click_order1()">Заказать</v-btn>
               </div>
             </v-toolbar-items>
           </div>
@@ -39,6 +39,54 @@ export default {
   methods: {
     handleDrawer: function(){
       this.$emit('changeDrawer');
+    },
+    Click_order1(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Click_order1");
+      window.yaSendButton("Click_order1");
+    },
+    Submit_tel1(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Submit_tel1");
+      window.yaSendButton("Submit_tel1");
+    },
+    SubmitBTN(target){
+      switch (target) {
+        case 'Submit_support':
+            this.Submit_support();
+          break;
+        case 'Click_more':
+          this.Click_more();
+          break;
+        case 'Sublit_Blog1':
+          this.Sublit_Blog1();
+          break;
+        case 'Click_contact':
+          this.Click_contact()
+          break;
+        default:
+          break;
+      }
+    },
+    Submit_support(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Submit_support");
+      window.yaSendButton("Submit_support");
+    },
+    Click_more(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Click_more");
+      window.yaSendButton("Click_more");
+    },
+    Sublit_Blog1(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Sublit_Blog1");
+      window.yaSendButton("Sublit_Blog1");
+    },
+    Click_contact(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Click_contact");
+      window.yaSendButton("Click_contact");
     }
   }
 }

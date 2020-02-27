@@ -24,7 +24,7 @@
                         <div class="underCardScheme underSecondCard"><span>{{underSecondCard}}</span></div>
                     </div>
                     <div class="buttonsBlock py-5">
-                        <v-btn rounded color="primary secondaryColor" class="mx-2"  href="#targetOffer">Заказать</v-btn>
+                        <v-btn rounded color="primary secondaryColor" class="mx-2"  href="#targetOffer" @click="Click_order3()">Заказать</v-btn>
                     </div>
                 </v-col>
             </v-row>
@@ -44,6 +44,13 @@ export default {
             underFirstCard: `Формируют блокчейн сеть ACRYL`,
             underSecondCard: `Платит за использование блокчейн сети ACRYL`
       }
+  },
+  methods: {
+    Click_order3(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Click_order3");
+      window.yaSendButton("Click_order3");
+    }
   }
 }
 </script>

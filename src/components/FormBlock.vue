@@ -68,6 +68,7 @@ export default {
   },
     methods: {
         formSend: function() {
+            this.Submit_order();
             if (this.name == '' || this.phone == '' || this.email == '') {
                 // console.log("Запони все поля")
                 this.errorMessage = 'Заполните все поля'
@@ -106,7 +107,12 @@ export default {
             this.modalTrue = !this.modalTrue;
             this.errorMessage = '';
             this.response = ''
-        }
+        },
+        Submit_order(){
+            console.log("Submit_order")
+            window.gaSendButton("Submit_order");
+            window.yaSendButton("Submit_order");
+        },
     }
 }
 </script>

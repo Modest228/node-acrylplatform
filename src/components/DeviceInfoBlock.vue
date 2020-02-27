@@ -18,7 +18,7 @@
                             </v-col>
                         </v-row>
                     </div>
-                    <div class="py-5"><v-btn rounded color="primary secondaryColor"  href="#targetOffer">Заказать</v-btn></div>
+                    <div class="py-5"><v-btn rounded color="primary secondaryColor"  href="#targetOffer" @click="Click_order2()">Заказать</v-btn></div>
                 </v-col>
             </v-row>
         </v-container>
@@ -42,6 +42,13 @@ export default {
                 {id: 6, icon: "icon_mobile", describe: "Удобное приложение"}
             ]
       }
+  },
+  methods: {
+    Click_order2(){
+      console.log("CLICK_ORDER")
+      window.gaSendButton("Click_order2");
+      window.yaSendButton("Click_order2");
+    }
   }
 }
 </script>
