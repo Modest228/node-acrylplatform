@@ -130,6 +130,7 @@ export default {
               {id: 3, icon: "tw", link: "https://twitter.com/acrylplatform", click: "Submit_TW"},
               {id: 4, icon: "vk", link: "https://vk.com/acrylplatform", click: "Submit_VK"},
               {id: 5, icon: "tg", link: "https://t.me/Acrylplatform", click: "Submit_TG"},
+              {id: 6, icon: "gh", link: "https://github.com/acrylplatform", click: "Submit_github"}
           ],
           email: '',
           agreeCheckLabel: `

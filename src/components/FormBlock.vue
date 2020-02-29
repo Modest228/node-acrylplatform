@@ -27,7 +27,7 @@
                             </template>
                         </v-checkbox>
                         <div class="d-flex align-center ">
-                            <v-btn rounded color="primary secondaryColor" @click="formSend()">Заказать</v-btn>
+                            <v-btn rounded color="primary secondaryColor" @click="formSend()">Отправить</v-btn>
                         </div>
                     </div>
                 </v-col>
@@ -57,7 +57,7 @@ export default {
   name: 'FormBlock',
   data(){
       return {
-            headSection: `Заказать`,
+            headSection: `Заказать ACRYL Node`,
             valid: false,
             name: '',
             phone: '',
@@ -88,12 +88,12 @@ export default {
                 this.errorMessage = 'Вы не согласились с обработкой персональных данных';
             }else{
                 this.Submit_order();
-                if (this.name == '' || this.phone == '' || this.email == '') {
-                    // console.log("Запони все поля")
-                    this.errorMessage = 'Заполните все поля'
-                    this.response = ''
-                    this.modalTrue = true;
-                } else {
+                // if (this.name == '' || this.phone == '' || this.email == '') {
+                //     // console.log("Запони все поля")
+                //     this.errorMessage = 'Заполните все поля'
+                //     this.response = ''
+                //     this.modalTrue = true;
+                // } else {
                     let formData = new FormData();
                     formData.append('fields[name_1]', this.name)
                     formData.append('fields[543953_1][907777]', this.phone)
@@ -120,7 +120,7 @@ export default {
                         this.phone = ''
                         this.email = ''
                     });
-                }
+                // }
             }
         },
         reversModal: function() {
