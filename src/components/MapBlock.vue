@@ -31,7 +31,7 @@ export default {
     width: 100%;
     height: 480px;
     display: flex;
-    background-image: url(/img/mapOffice.png);
+    background-image: url(/img/mapOfficev2.jpg);
     background-position: center;
     background-size: auto;
     .flexOptionContaner{

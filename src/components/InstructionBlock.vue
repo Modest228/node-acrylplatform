@@ -1,5 +1,5 @@
 <template>
-    <section class="instruction-block mxw1200">
+    <section class="instruction-block mxw1200v2">
         <v-container>
             <v-row class="height100">
                 <v-col cols="12" sm="12">

@@ -62,7 +62,7 @@ export default {
     display: flex;
     padding: 20px 10px;
     .mapImage{
-        background-image: url(/img/earthMap.png);
+        background-image: url(/img/earthMapv2.png);
         width: 100%;
         min-height: 250px;
         @include respond-to(medium-screens) { 
