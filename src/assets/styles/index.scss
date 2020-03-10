@@ -57,8 +57,16 @@ body{
   background: #FBFBFB;
 }
 
+.v-input__slot {
+  align-items: flex-start;
+}
+
 .input__slotv2 {
   align-items: flex-start;
+}
+
+.CheckBoxUp .v-input__control .v-input__slot{
+  align-items: flex-start !important;
 }
 
 b, strong {

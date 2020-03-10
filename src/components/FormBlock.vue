@@ -21,7 +21,7 @@
                                             label="Телефон"
                                             name="phone"
                                             required></v-text-field>
-                                        <v-checkbox v-model="agreeCheck" class="input__slotv2">
+                                        <v-checkbox v-model="agreeCheck" class="CheckBoxUp">
                                             <template v-slot:label>
                                                 <span @click.stop  class="agreeCheckLabel" v-html="agreeCheckLabel"></span>
                                             </template>

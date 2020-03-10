@@ -40,7 +40,7 @@
                             v-model="email"
                             label="E-mail"
                             required ></v-text-field>
-                        <v-checkbox dark v-model="agreeCheck" >
+                        <v-checkbox dark v-model="agreeCheck" class="CheckBoxUp" >
                             <template v-slot:label>
                                 <span @click.stop class="agreeCheckLabel" v-html="agreeCheckLabel"></span>
                             </template>
