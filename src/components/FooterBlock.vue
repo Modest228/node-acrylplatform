@@ -40,7 +40,7 @@
                             v-model="email"
                             label="E-mail"
                             required ></v-text-field>
-                        <v-checkbox dark v-model="agreeCheck" >
+                        <v-checkbox dark v-model="agreeCheck" class="CheckBoxUp" >
                             <template v-slot:label>
                                 <span @click.stop class="agreeCheckLabel" v-html="agreeCheckLabel"></span>
                             </template>
@@ -345,6 +345,7 @@ export default {
         display: flex;
         flex-direction: column;
         margin: 20px 0;
+        font-weight: 500;
         a{
             color: white;
             text-decoration: none;
@@ -404,6 +405,9 @@ export default {
         justify-items: center;
         justify-content: center;
         height: 100%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
         p{
             margin: 0;
             padding: 0;

@@ -1,5 +1,5 @@
 <template>
-    <section class="calc-block">
+    <section class="calc-block" style="padding: 0px 7.5%;">
         <v-card class="calc-card">
             <v-container>
                 <v-row>
@@ -96,10 +96,11 @@ export default {
 @import "../assets/styles/index.scss";
 .calc-block{
     .calc-card{
-        margin: 20px 10px;
+        margin: 10px 10px;
         border-radius: 20px !important; 
         padding-top: 30px;
         padding-bottom: 30px;
+        background: #FBFBFB;
         .checkBoxInput{
             display: flex;
             justify-content: center;
@@ -107,7 +108,7 @@ export default {
     }
     .headSection{
         text-align: center;
-        width: 300px;
+     //   width: 300px;
         margin: 0 auto 10px;
     }
     .formNodeCount{

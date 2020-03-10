@@ -4,33 +4,33 @@
         <v-container>
             <v-row class="height100">
                 <v-col cols="12" offset-sm="5" md="7" >
-                    <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
-                    <div class="maxWidth">
-                        <v-text-field
-                            v-model="name"
-                            label="Имя"
-                            name="name"
-                            required></v-text-field>
-                        <v-text-field
-                            v-model="email"
-                            name="email"
-                            label="Электронная почта"
-                            required></v-text-field>
-                        <v-text-field
-                            v-model="phone"
-                            label="Телефон"
-                            name="phone"
-                            required></v-text-field>
-                        <v-checkbox v-model="agreeCheck" >
-                            <template v-slot:label>
-                                <span @click.stop  class="agreeCheckLabel" v-html="agreeCheckLabel"></span>
-                            </template>
-                        </v-checkbox>
-                        <div class="d-flex align-center ">
-                            <v-btn rounded color="primary secondaryColor" @click="formSend()">Отправить</v-btn>
-                        </div>
-                    </div>
-                </v-col>
+                                    <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
+                                    <div class="maxWidth">
+                                        <v-text-field
+                                            v-model="name"
+                                            label="Имя"
+                                            name="name"
+                                            required></v-text-field>
+                                        <v-text-field
+                                            v-model="email"
+                                            name="email"
+                                            label="Электронная почта"
+                                            required></v-text-field>
+                                        <v-text-field
+                                            v-model="phone"
+                                            label="Телефон"
+                                            name="phone"
+                                            required></v-text-field>
+                                        <v-checkbox v-model="agreeCheck" class="CheckBoxUp">
+                                            <template v-slot:label>
+                                                <span @click.stop  class="agreeCheckLabel" v-html="agreeCheckLabel"></span>
+                                            </template>
+                                        </v-checkbox>
+                                        <div class="d-flex align-center ">
+                                            <v-btn rounded color="primary secondaryColor" @click="formSend()">Отправить</v-btn>
+                                        </div>
+                                    </div>
+                                </v-col>
             </v-row>
         </v-container>
         <div class='modalOpen' v-if="modalTrue">

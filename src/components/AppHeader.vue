@@ -11,11 +11,14 @@
           <div class="hidden-sm-and-down h-100">
             <v-toolbar-items>
               <div class="d-flex align-center pr-3">
-                <a href="tel:88005113715" class="disPrimary" @click="Submit_tel1()">8 (800) 511-37-15</a>
+                <a href="tel:88005113715" class="disPrimary elHover" @click="Submit_tel1()">8 (800) 511-37-15</a>
               </div>
               <div class="d-flex align-center pr-3" v-for="(item, i) in getmenuItems" :key="`menuItem${i}`">
                 <a :href="`${item.link}`" class="elHover" :target="`${item.target}`" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`">{{item.text}}</a>
               </div>
+               <div class="d-flex align-center pr-3">
+                <a href="#targetOffer" class="elHover" @click="`${Click_order4()}`"> Контакты </a>
+               </div>
               <div class="d-flex align-center pl-3">
                 <v-btn rounded color="primary secondaryColor" small href="#targetOffer" @click="Click_order1()">Заказать</v-btn>
               </div>
@@ -113,7 +116,7 @@ export default {
   @include respond-to(medium-screens) {width: 220px;}
   .widthMobil{
     height: 18px;
-    @include respond-to(medium-screens) {height: 29px;}
+    @include respond-to(medium-screens) {height: 20px;}
   }
 }
 .disPrimary{
@@ -129,10 +132,11 @@ export default {
   color: black !important;
   text-decoration: none;
   vertical-align: middle;
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 12px;
   line-height: 20px;
   font-style: normal;
+  Letter-spacing: 1px;
   &:hover{
     text-decoration: underline;
   }

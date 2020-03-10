@@ -44,8 +44,8 @@ export default {
     justify-content: center;
     @include respond-to(medium-screens) { 
         background-position: top center; 
-        max-height: 660px;
-        min-height: 660px;
+        max-height: 556px;
+        min-height: 556px;
     }
     .btnHeaderBlock{
         position: absolute;
@@ -60,7 +60,7 @@ export default {
         @include respond-to(medium-screens) { 
             justify-content: flex-start;
             align-items: flex-start;
-            margin-top: 260px;         
+            margin-top: 230px;
         }
         h1, p{
             text-align: center;
@@ -80,7 +80,7 @@ export default {
         position: absolute;
         z-index: 3;
         bottom: 0;
-        background-image: url(/img/headerImage.png);
+        background-image: url(/img/headerImagev2.jpg);
         background-position: top right 30%;
         background-size: cover;
         background-repeat: no-repeat;

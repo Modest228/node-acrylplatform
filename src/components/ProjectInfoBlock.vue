@@ -56,9 +56,9 @@ export default {
     position: relative;
     width: 100%;
     display: flex;
-    padding: 20px 10px;
+    padding: 40px 10px 20px 10px;
     .mapImage{
-        background-image: url(/img/map.png);
+        background-image: url(/img/mapv2.png);
         width: 100%;
         min-height: 250px;
         @include respond-to(medium-screens) { 

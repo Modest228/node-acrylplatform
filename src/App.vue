@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <!-- NAVICAGTION DRAWER -->
-    <v-navigation-drawer fixed left temporary v-model="drawer" class="hidden-md-and-up">
+    <v-navigation-drawer fixed left temporary v-model="drawer" class="hidden-md-and-up" style="z-index: 2147483646;">
       <div class="nav-drawer">
         <div class="topBlock">
           <v-list-item>
@@ -77,7 +77,7 @@ export default {
         {id: 2, text: "Описание", link: "#targetInfo", target: "_self", click: "Click_more"},
         {id: 3, text: "Поддержка", link: "https://support.acrylminer.com/l_rus/", target: "_blank", click: "Submit_support"},
         {id: 4, text: "Блог", link: "https://medium.com/acrylplatformru", target: "_blank", click: "Sublit_Blog1"},
-        {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"} 
+       // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],
       drawer: false,
       addressItems: {
