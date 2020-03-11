@@ -30,6 +30,8 @@
                         <p><b><a :href="`mailto:${addressItems.email}`" @click="`${Submit_EmailLetter()}`">{{addressItems.email}}</a></b></p>
                         <p class="op07">{{addressItems.city}}</p>
                         <p class="op07">{{addressItems.address}}</p>
+                        <p class="op07">{{addressItems.support}}</p>
+                        <p><b><a :href="`mailto:${addressItems.emailsupport}`" @click="`${Submit_EmailLetter()}`">{{addressItems.emailsupport}}</a></b></p>
                     </div>                    
                 </v-col>
                 <v-col cols='12' sm='6' lg='3'>
