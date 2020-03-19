@@ -1,5 +1,5 @@
 <template>
-    <section class="calc-block" style="padding: 0px 7.5%;">
+    <section class="calc-block" style="padding: 0px 27.5%;">
         <v-card class="calc-card">
             <v-container>
                 <v-row>

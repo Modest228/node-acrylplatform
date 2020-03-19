@@ -2,9 +2,24 @@
     <section class="device-info-block mxw1200">
         <v-container>
             <v-row class="height100">
-                <v-col cols="12" sm="5">
-                    <div class="nodeImage"></div>
-                </v-col>
+                <!--<v-col cols="12" sm="5">-->
+                    <!--<div class="nodeImage"></div>-->
+                <!--</v-col>-->
+                 <div class="slider">
+                               <div class="but1 bgbutton1" tabindex="1"></div>
+                               <div class="but2 bgbutton2" tabindex="1"></div>
+                               <div class="but3 bgbutton3" tabindex="1"></div>
+                               <div class="img1" >
+                                   <img src="img/node_1.jpg"/>
+                               </div>
+                               <div class="img2" >
+                                   <img src="img/node_2.jpg"/>
+                               </div>
+                               <div class="img3">
+                                   <img src="img/node_3.jpg"/>
+                               </div>
+                           </div>
+
                 <v-col cols="12" sm="7">
                     <div class="describeBlock">
                         <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
@@ -30,6 +45,7 @@
         </v-container>
     </section>
 </template>
+
 
 <script>
 export default {
@@ -61,6 +77,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/styles/index.scss";
+@import "../assets/styles/slider.scss";
 .device-info-block{
     width: 100%;
     display: flex;
@@ -103,8 +120,21 @@ export default {
             }
         }
     }
-}
-.height100{
-    height: 100%;
+.bgbutton1 {
+      background-image: url(/img/node_1.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+          }
+.bgbutton2 {
+      background-image: url(/img/node_2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+          }
+
+.bgbutton3 {
+        background-image: url(/img/node_3.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+            }
 }
 </style>

@@ -70,6 +70,9 @@ export default {
         background-repeat: no-repeat;
         background-size: contain; 
     }
+    .mapImage:hover {
+        background-image: url(/img/earthMap.png);
+    }
     .numbersBlock{
         display: grid;
         grid-gap: 10px;

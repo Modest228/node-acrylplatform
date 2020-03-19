@@ -2,14 +2,11 @@
     <section class="faq-block mxw1200">
         <v-container>
             <v-row class="height100">
-                <v-col cols="12" sm="5" class="d-none d-sm-flex"> 
-                    <div class="mapImage"></div>
-                </v-col>
-                <v-col cols="12" sm="7">
+                <v-col cols="12" sm="12">
                     <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
                     <v-expansion-panels value="1" flat class="px-0">
                         <v-expansion-panel v-for="(item, i) in answers" :key="`answer${i}`" active-class="active-primary" >
-                            <v-expansion-panel-header class="px-0" >{{item.text}}</v-expansion-panel-header>
+                            <v-expansion-panel-header class="px-0 elevation-2" >{{item.text}}</v-expansion-panel-header>
                             <v-expansion-panel-content class="px-0">
                                 <div class="contentAnswer">
                                     <v-card class="mx-auto pa-2">
@@ -32,7 +29,7 @@ export default {
   props: ['addressItems'],
   data(){
       return {
-            headSection: `FAQ`,
+            headSection: `Ответы на вопросы`,
             answers: [
                 {id: 0, text: `Какова доходность и цена устройства?`, 
                         answer: `В среднем вознаграждение за размещение устройства составляет $150 ежемесячно. 

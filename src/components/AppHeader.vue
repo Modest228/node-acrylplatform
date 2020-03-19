@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app elevate-on-scroll short class="surface" pa-0>
+    <v-app-bar app elevate-on-scroll short class="surface i-header" pa-0>
       <v-container h-100 pa-0 align-center d-flex>
         <div class="display1200 h-100">
           <v-toolbar-title>
