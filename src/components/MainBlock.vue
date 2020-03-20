@@ -21,7 +21,7 @@
                             </v-col>
                         </v-row>
                         <v-row class="formNodeCount">
-                            <v-col cols="12" xs="12" sm="12" md="4" class="maxWidth320 CountNodeHead px-3">
+                            <v-col cols="12" xs="12" sm="12" md="9" class="maxWidth320 CountNodeHead px-3">
                                 <label for="formNodecountNode">{{countNodeHead}}</label>
                                 <input id="formNodecountNode" class="formNodeCountInput" name="countNode" type="text" :value="`${countNode}`" disabled/>
                                 <v-slider
@@ -34,7 +34,9 @@
                                 >
                                 </v-slider>
                             </v-col>
-                            <v-col cols="12" xs="12" sm="12" md="4" class="maxWidth320 CountMonthHead px-3">
+                            </v-row>
+                            <v-row class="formNodeCount">
+                            <v-col cols="12" xs="12" sm="12" md="9" class="maxWidth320 CountMonthHead px-3 ">
                                 <label for="formNodecountMonth">{{countMonthHead}}</label>
                                 <input id="formNodecountMonth" class="formNodeCountInput" name="countMonth" type="text" :value="`${countMonth}`" disabled/>
                                 <v-slider
@@ -47,17 +49,24 @@
                                 >
                                 </v-slider>
                             </v-col>
-                            <v-col cols="12" md="4" class="maxWidth320 IncomeHead px-3">
+                            </v-row>
+                            <v-row class="formNodeCount">
+                            <v-col cols="12" md="9" class="maxWidth320 IncomeHead px-3">
                                 <label for="formNodeincome">{{incomeHead}}</label>
                                 <input id="formNodeincome" class="formNodeCountInput" name="income" type="text" :value="`$${income}`" />
                             </v-col>
-                        </v-row>
+                            </v-row>
                         <v-row>
-                            <v-col class="checkBoxInput">
-                                <v-checkbox
+                            <v-col cols="12"  class="checkBoxInput">
+                                <v-checkbox class="fsize"
                                 v-model="checkBoxInput"
                                 :label="`${checkBoxLabel.toString()}`"
                                 ></v-checkbox>
+                            </v-col>
+                        </v-row>
+                         <v-row>
+                            <v-col>
+                               <div class="py-5"><v-btn block variant="primary" rounded color="primary secondaryColor"  href="#targetOffer" @click="Click_order2()">Заказать</v-btn></div>
                             </v-col>
                         </v-row>
                     </v-container>
@@ -124,12 +133,17 @@ export default {
 @import "../assets/styles/index.scss";
 .calc-block{
     .calc-card{
-        margin: 10px 10px;
+        margin: -10px -230px;
         border-radius: 20px !important;
         background: #FBFBFB;
+        min-width: 468px;
+        max-width: 468px;
+        max-height: 554px;
+        min-height: 554px;
         .checkBoxInput{
             display: flex;
             justify-content: center;
+            padding-bottom: 0px;
         }
     }
     .headSection{
@@ -207,12 +221,13 @@ export default {
         }
     }
 }
+
 .imgflow {
     width: 100%;
     max-width: 1650px;
     height: 100vh;
-    min-height: 500px;
-    max-height: 500px;
+    min-height: 675px;
+    max-height: 675px;
     overflow: hidden;
     position: relative; 
     margin: 0 auto;
@@ -221,8 +236,8 @@ export default {
     justify-content: center;
     @include respond-to(medium-screens) { 
         background-position: top center; 
-        max-height: 556px;
-        min-height: 556px;
+        max-height: 675px;
+        min-height: 675px;
     }
     .btnHeaderBlock{
         position: absolute;
@@ -263,7 +278,7 @@ export default {
         background-repeat: no-repeat;
         width: 100%;
         height: 261px;
-        @include respond-to(medium-screens) { background-position: top center; height: 480px; }
+        @include respond-to(medium-screens) { background-position: top center; height: 675px; }
         @include respond-to(wide-screens) {  }
     }
 }

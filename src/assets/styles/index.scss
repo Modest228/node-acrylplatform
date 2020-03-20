@@ -69,6 +69,30 @@ body{
   // padding-left: 5px !important;
 }
 
+.v-input__control .v-input__slot {
+  margin-bottom: 0;
+}
+
+.v-application .py-5 {
+  padding-top: 0 !important;
+  padding-left: 71px;
+  padding-right: 71px;
+}
+
+.v-input--selection-controls.v-input.fsize  {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+.v-input--selection-controls .v-input__slot > .v-label, .v-input--selection-controls .v-radio > .v-label {
+  font-size: 14px;
+}
+
+.v-application .px-3 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 b, strong {
   font-weight: 500;
 }

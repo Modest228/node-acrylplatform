@@ -39,7 +39,7 @@
                             </v-col>
                         </v-row>
                     </div>
-                    <div class="py-5"><v-btn rounded color="primary secondaryColor"  href="#targetOffer" @click="Click_order2()">Заказать</v-btn></div>
+                    <div class="py-4"><v-btn rounded color="primary secondaryColor" href="#targetOffer" @click="Click_order2()">Заказать</v-btn></div>
                 </v-col>
             </v-row>
         </v-container>

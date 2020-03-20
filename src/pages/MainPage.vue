@@ -3,6 +3,7 @@
         <main-block></main-block>
         <project-info-block></project-info-block>
         <device-info-block></device-info-block>
+        <compare-block></compare-block>
         <instruction-block></instruction-block>
         <faq-block :addressItems="addressItems"></faq-block>
         <form-block></form-block>
@@ -14,6 +15,7 @@
 import MainBlock from '@/components/MainBlock'
 import ProjectInfoBlock from '@/components/ProjectInfoBlock'
 import DeviceInfoBlock from '@/components/DeviceInfoBlock'
+import CompareBlock from '@/components/CompareBlock'
 import InstructionBlock from '@/components/InstructionBlock'
 import FaqBlock from '@/components/FaqBlock'
 import FormBlock from '@/components/FormBlock'
@@ -26,6 +28,7 @@ export default {
     MainBlock,
     ProjectInfoBlock,
     DeviceInfoBlock,
+    CompareBlock,
     InstructionBlock,
     FaqBlock,
     FormBlock,
