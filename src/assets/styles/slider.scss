@@ -13,7 +13,7 @@
 .slider{
   width: 35%;
   margin: 0 auto;
-  margin-top: 20px;
+ // margin-top: 20px;
   position: relative;
 }
 /*=============СЛАЙДЫ===================*/
@@ -131,12 +131,14 @@ img{
   -o-border-radius: 7px;
   border-radius: 7px;
   outline:none;
+  margin-left: 6%;
+  margin-bottom: -16%;
 }
 .but1{
-  margin-left: -100px;
+  margin-left: -75px;
 }
 .but2{
-  margin-left: -50px;
+  margin-left: -25px;
 }
 
 .but1{

@@ -1,10 +1,10 @@
 <template>
-    <section class="form-block mxw1200">
+    <section class="form-block imgBlock">
         <div id="targetOffer"></div>
         <v-container>
             <v-row class="height100">
-                <v-col cols="12" offset-sm="5" md="7" >
-                                    <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
+                <v-col cols="12" offset-sm="5" md="3" style="background-color: white; min-width: 340px; min-height: 377px; max-width: 355px; max-height: 377px; border-radius: 12px; margin-top: auto; margin-bottom: auto;">
+                                    <h2 class="headSection pb-3 secondaryColor " align="center">{{headSection}}</h2>
                                     <div class="maxWidth">
                                         <v-text-field
                                             v-model="name"
@@ -27,7 +27,7 @@
                                             </template>
                                         </v-checkbox>
                                         <div class="d-flex align-center ">
-                                            <v-btn rounded color="primary secondaryColor" @click="formSend()">Отправить</v-btn>
+                                            <v-btn class="border-radius: 12px;" block  color="bbtn secondaryColor" href="#targetSend" @click="formSend()">Отправить</v-btn>
                                         </div>
                                     </div>
                                 </v-col>
@@ -73,10 +73,7 @@ export default {
                 Нажимая кнопку «Отправить», я даю
                 согласие на обработку своих
                 персональных данных в соответствии с
-                <a style="color: #2EA9FB;" href="/privacy">Политикой конфиденциальности</a>, а также
-                соглашаюсь получать информацию о
-                скидках и специальных предложениях на
-                указанный e-mail и телефон.`,
+                <a style="color: #2EA9FB;" href="/privacy">Политикой конфиденциальности</a>.`,
             agreeCheck: false,
       }
   },
@@ -146,7 +143,7 @@ export default {
     top:-100px;
 }
 .agreeCheckLabel{
-    font-size: 12px;
+    font-size: 11px;
     line-height: 16px;
 }
 .form-block{
@@ -154,24 +151,11 @@ export default {
     display: flex;
     padding: 20px 10px;
     position: relative;
-    .mapImage{
-        background-image: url(/img/FAQ_Node.png);
-        width: 100%;
-        min-height: 250px;
-        @include respond-to(medium-screens) { 
-            max-height: 500px;
-            min-height: 500px;
-        }
-        height: 100%;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: contain; 
-    }
     .height100{
         height: 100%;
     }
     .maxWidth{
-        max-width: 320px;
+        max-width: 325px;
     }
     .responseError{
         padding-top: 10px;
@@ -183,6 +167,20 @@ export default {
         }
     }
 }
+
+.imgBlock{
+    background-image: url(/img/form_photo.jpg);
+    width: 100%;
+    @include respond-to(medium-screens) {
+        max-height: 548px;
+        min-height: 548px;
+    }
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+  //  background-size: cover;
+}
+
 .modalOpen{
   position: fixed;
   top: 0;

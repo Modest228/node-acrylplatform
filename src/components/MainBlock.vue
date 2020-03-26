@@ -5,9 +5,11 @@
                     <div class="btnHeaderBlock">
                         <div class="textHeaderBlock">
                             <h1>Получай от 150$<br />в месяц</h1>
-                            <p>Разместив мини дата-центр<br /> у себя в квартире!</p>
+                            <p>Успей приобрести персональный мини<br />
+                                дата-центр по старому курсу доллара<br />
+                                до 31 марта! у себя в квартире!</p>
                         </div>
-                        <v-btn rounded color="primary secondaryColor" href="#targetInfo" @click="Click_more()">Подробнее</v-btn>
+                        <v-btn rounded color="bbtn secondaryColor" href="#targetOffer" @click="Click_more()">Заказать</v-btn>
                     </div>
                 </v-col>
             </v-row>
@@ -62,11 +64,6 @@
                                 v-model="checkBoxInput"
                                 :label="`${checkBoxLabel.toString()}`"
                                 ></v-checkbox>
-                            </v-col>
-                        </v-row>
-                         <v-row>
-                            <v-col>
-                               <div class="py-5"><v-btn block variant="primary" rounded color="primary secondaryColor"  href="#targetOffer" @click="Click_order2()">Заказать</v-btn></div>
                             </v-col>
                         </v-row>
                     </v-container>
@@ -139,7 +136,7 @@ export default {
         min-width: 468px;
         max-width: 468px;
         max-height: 554px;
-        min-height: 554px;
+       // min-height: 554px;
         .checkBoxInput{
             display: flex;
             justify-content: center;
@@ -224,7 +221,7 @@ export default {
 
 .imgflow {
     width: 100%;
-    max-width: 1650px;
+    min-width: 1650px;
     height: 100vh;
     min-height: 675px;
     max-height: 675px;
@@ -249,10 +246,11 @@ export default {
         justify-content: center;
         align-items: center;
         margin-top: 120px;
+        padding-left: 5%;
         @include respond-to(medium-screens) { 
             justify-content: flex-start;
             align-items: flex-start;
-            margin-top: 230px;
+            margin-top: 114px;
         }
         h1, p{
             text-align: center;
@@ -272,12 +270,11 @@ export default {
         position: absolute;
         z-index: 3;
         bottom: 0;
-        background-image: url(/img/headerImagev2.jpg);
+        background-image: url(/img/main_photo.jpg);
         background-position: top right 30%;
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        height: 261px;
         @include respond-to(medium-screens) { background-position: top center; height: 675px; }
         @include respond-to(wide-screens) {  }
     }

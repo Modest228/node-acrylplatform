@@ -1,10 +1,22 @@
 <template>
-    <section class="device-info-block mxw1200">
+    <section class="device-info-block mxw1200" id="infoblock">
         <v-container>
             <v-row class="height100">
-                <!--<v-col cols="12" sm="5">-->
-                    <!--<div class="nodeImage"></div>-->
-                <!--</v-col>-->
+                <v-col cols="12" sm="7">
+                    <div class="describeBlock">
+                        <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
+                        <p class="py-2 secondaryColor">{{textSection_1}}</p>
+                    </div>
+                    <div class="advantagesBlock">
+                        <v-card>
+                        <v-row>
+                            <v-col v-for="(item, i) in advantages" :key="`advantageItem${i}`" :class="`advantageItem grid${item.id}`" cols="12" md="6">
+                                <span class="describe">{{item.describe}}</span>
+                            </v-col>
+                        </v-row>
+                        </v-card>
+                    </div>
+                </v-col>
                  <div class="slider">
                                <div class="but1 bgbutton1" tabindex="1"></div>
                                <div class="but2 bgbutton2" tabindex="1"></div>
@@ -19,28 +31,6 @@
                                    <img src="img/node_3.jpg"/>
                                </div>
                            </div>
-
-                <v-col cols="12" sm="7">
-                    <div class="describeBlock">
-                        <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
-                        <p class="py-2 secondaryColor">{{textSection_1}}</p>
-                    </div>
-                    <div class="advantagesBlock">
-                        <v-row>
-                            <v-col v-for="(item, i) in advantages" :key="`advantageItem${i}`" :class="`advantageItem grid${item.id}`" cols="12" md="6">
-
-                                <picture>
-                                    <source :srcset="`/img/icon_web/${item.icon}.webp`" type="image/webp">
-                                    <source :srcset="`/img/icon_web/${item.icon}.png`" type="image/png"> 
-                                    <img class="icon" :src="`/img/icon_web/${item.icon}.webp`" :alt="`${item.icon}`">
-                                </picture>
-
-                                <span class="describe">{{item.describe}}</span>
-                            </v-col>
-                        </v-row>
-                    </div>
-                    <div class="py-4"><v-btn rounded color="primary secondaryColor" href="#targetOffer" @click="Click_order2()">Заказать</v-btn></div>
-                </v-col>
             </v-row>
         </v-container>
     </section>
@@ -52,9 +42,9 @@ export default {
   name: 'ProjectInfoBlock',
   data(){
       return {
-            headSection: `Описание устройства`,
+            headSection: `Приемущества ACRYL Node`,
             textSection_1: `ACRYL Node – экономичен и нуждается в потреблении энергии, сравнимом с обычной лампочкой. 
-                            Никаких сложных действий, простые шаги для того, чтобы начать зарабатывать. Текущая доходность ~ $150 в месяц. `,
+                            Никаких сложных действий, простые шаги для того, чтобы начать зарабатывать. Текущая доходность от $150 в месяц. `,
             advantages: [
                 {id: 1, icon: "icon_dollar", describe: "Стабильная доходность" },
                 {id: 2, icon: "icon_garant", describe: "Гарантия"},
@@ -101,25 +91,30 @@ export default {
             img.icon{
                 width: 60px;
                 height: 41px;
-                @include respond-to(medium-screens) { 
+                @include respond-to(medium-screens) {
                     width: 120px;
                     height: 80px;
                 }
-                @include respond-to(large-screens) { 
+                @include respond-to(large-screens) {
                     width: 75px;
                     height: 48px;
                 }
-                @include respond-to(wide-screens) { 
+                @include respond-to(wide-screens) {
                     width: 120px;
                     height: 80px;
                 }
             }
             .describe{
-                padding-left: 20px;
-                max-width: 170px;
+                padding: 20px 10px 20px 10px;
+              //  max-width: 170px;
             }
         }
     }
+
+.device-info-block .advantagesBlock .advantageItem[data-v-b322a76e]:hover {
+        color: black;
+    }
+
 .bgbutton1 {
       background-image: url(/img/node_1.jpg);
       background-repeat: no-repeat;

@@ -1,23 +1,33 @@
 <template>
-    <section class="instruction-block mxw1200v2">
+    <section class="instruction-block mxw1200v2" id="instructionblock" align="left">
             <v-container>
                 <v-row class="height100">
                     <v-col cols="12" sm="12">
                         <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
-                            <v-timeline align-top dense>
-                                <v-timeline-item
-                                  v-for="(item, i) in items"
-                                  :key="i"
-                                  :color="item.color"
-                                  :icon="item.icon"
-                                  fill-dot
-                                >
-                          <v-card class="elevation-2">
-                            <v-card-text>{{item.text}}</v-card-text>
-                          </v-card>
-                    </v-timeline-item>
-                </v-timeline>
             </v-col>
+                    <div class="slider">
+                        <div class="but1" tabindex="1"></div>
+                        <div class="but2" tabindex="1"></div>
+                        <div class="but3" tabindex="1"></div>
+                        <div class="but4" tabindex="1"></div>
+                        <div class="but5" tabindex="1"></div>
+                        <div class="img1" >
+                            <img src="img/an_step_1.jpg"/>
+                        </div>
+                        <div class="img2" >
+                            <img src="img/an_step_2.jpg"/>
+                        </div>
+                        <div class="img3">
+                            <img src="img/an_step_3.jpg"/>
+                        </div>
+                        <div class="img4">
+                            <img src="img/an_step_4.jpg"/>
+                        </div>
+                        <div class="img5">
+                            <img src="img/an_step_5.jpg"/>
+                        </div>
+                    </div>
+                    <v-btn rounded color="bbtn bauto secondaryColor" href="#targetOffer" align="center" @click="Click_more()">Заказать</v-btn>
         </v-row>
     </v-container>
   </section>
@@ -26,7 +36,7 @@
 <script>
   export default {
     data: () => ({
-    headSection: `Инструкция по использованию`,
+    headSection: `Пошаговая инструкция`,
       items: [
         {
           color: '#fedd0e',
@@ -60,6 +70,7 @@
 
 <style lang="scss" scoped>
 @import "../assets/styles/index.scss";
+@import "../assets/styles/sliderv2.scss";
 .instruction-block{
     width: 100%;
     display: flex;
@@ -71,5 +82,11 @@
 }
 .height100{
     height: 100%;
+}
+
+.bauto {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
 }
 </style>

@@ -93,8 +93,16 @@ body{
   padding-bottom: 0;
 }
 
+.v-btn .v-btn__content {
+  color: #fedd0e;
+}
+
+.v-btn--rounded {
+  border-radius: 0px;
+}
+
 b, strong {
-  font-weight: 500;
+font-weight: 500;
 }
 
 //classes for text

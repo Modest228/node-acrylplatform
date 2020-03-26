@@ -73,9 +73,10 @@ export default {
   data() {
     return {
       menuItems: [
-        // {id: 1, text: "Магазин", link: "https://shop.acrylminer.com/ru/", target: "_blank"},
-        {id: 2, text: "Описание", link: "#targetInfo", target: "_self", click: "Click_more"},
-       // {id: 3, text: "Поддержка", link: "https://support.acrylminer.com/l_rus/", target: "_blank", click: "Submit_support"},
+         {id: 1, text: "Приемущества", link: "#infoblock", target: "_self", click: "Click_more"},
+         {id: 2, text: "Инструкция", link: "#instructionblock", target: "_self", click: "Click_more"},
+        {id: 2, text: "Acryl Client", link: "#clientblock", target: "_self", click: "Click_more"},
+        {id: 3, text: "FAQ", link: "#faq", target: "_self", click: "Click_more"},
         {id: 4, text: "Блог", link: "https://medium.com/acrylplatformru", target: "_blank", click: "Sublit_Blog1"},
        // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],

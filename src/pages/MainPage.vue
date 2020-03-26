@@ -5,9 +5,9 @@
         <device-info-block></device-info-block>
         <compare-block></compare-block>
         <instruction-block></instruction-block>
+        <client-block></client-block>
         <faq-block :addressItems="addressItems"></faq-block>
         <form-block></form-block>
-        <map-block :addressItems="addressItems"></map-block>
     </div>
 </template>
 
@@ -17,9 +17,9 @@ import ProjectInfoBlock from '@/components/ProjectInfoBlock'
 import DeviceInfoBlock from '@/components/DeviceInfoBlock'
 import CompareBlock from '@/components/CompareBlock'
 import InstructionBlock from '@/components/InstructionBlock'
+import ClientBlock from '@/components/ClientBlock'
 import FaqBlock from '@/components/FaqBlock'
 import FormBlock from '@/components/FormBlock'
-import MapBlock from '@/components/MapBlock'
 
 export default {
   name: 'App',
@@ -30,9 +30,9 @@ export default {
     DeviceInfoBlock,
     CompareBlock,
     InstructionBlock,
+    ClientBlock,
     FaqBlock,
-    FormBlock,
-    MapBlock
+    FormBlock
   },
 
   data() {
