@@ -2,21 +2,29 @@
     <section class="device-info-block mxw1200" id="infoblock">
         <v-container>
             <v-row class="height100">
-                <v-col cols="12" sm="7">
+                <v-col sm="12" md="6">
                     <div class="describeBlock">
                         <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
                         <p class="py-2 secondaryColor">{{textSection_1}}</p>
                     </div>
                     <div class="advantagesBlock">
-                        <v-card>
-                        <v-row>
-                            <v-col v-for="(item, i) in advantages" :key="`advantageItem${i}`" :class="`advantageItem grid${item.id}`" cols="12" md="6">
-                                <span class="describe">{{item.describe}}</span>
-                            </v-col>
-                        </v-row>
-                        </v-card>
+
+                            <v-row>
+                            <!--<v-col v-for="(item, i) in advantages" :key="`advantageItem${i}`" :class="`advantageItem ch grid${item.id}`">-->
+                                <!--<span class="describe">{{item.describe}}</span>-->
+                            <!--</v-col>-->
+                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
+                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
+                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
+                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
+                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
+                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
+                            </v-row>
+
                     </div>
                 </v-col>
+                <container>
+                    <v-row>
                  <div class="slider">
                                <div class="but1 bgbutton1" tabindex="1"></div>
                                <div class="but2 bgbutton2" tabindex="1"></div>
@@ -31,6 +39,8 @@
                                    <img src="img/node_3.jpg"/>
                                </div>
                            </div>
+                    </v-row>
+                </container>
             </v-row>
         </v-container>
     </section>
@@ -42,7 +52,7 @@ export default {
   name: 'ProjectInfoBlock',
   data(){
       return {
-            headSection: `Приемущества ACRYL Node`,
+            headSection: `Преимущества ACRYL Node`,
             textSection_1: `ACRYL Node – экономичен и нуждается в потреблении энергии, сравнимом с обычной лампочкой. 
                             Никаких сложных действий, простые шаги для того, чтобы начать зарабатывать. Текущая доходность от $150 в месяц. `,
             advantages: [
@@ -105,14 +115,15 @@ export default {
                 }
             }
             .describe{
-                padding: 20px 10px 20px 10px;
-              //  max-width: 170px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 5%;
+                margin-top: 5%;
             }
         }
     }
-
-.device-info-block .advantagesBlock .advantageItem[data-v-b322a76e]:hover {
-        color: black;
+.advantageItem:hover {
+        background-color: #fedd0e;
     }
 
 .bgbutton1 {

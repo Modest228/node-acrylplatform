@@ -7,14 +7,14 @@
                             <h1>Получай от 150$<br />в месяц</h1>
                             <p>Успей приобрести персональный мини<br />
                                 дата-центр по старому курсу доллара<br />
-                                до 31 марта! у себя в квартире!</p>
+                                до 31 марта!</p>
                         </div>
-                        <v-btn rounded color="bbtn secondaryColor" href="#targetOffer" @click="Click_more()">Заказать</v-btn>
+                            <v-btn rounded class="bh" href="#targetOffer" @click="Click_more()">Заказать</v-btn>
                     </div>
                 </v-col>
             </v-row>
         <div class="imgHeaderBlock"></div>
-            <section class="calc-block" style="padding: 100px 27.5%; z-index: 2222;">
+            <div class="calc-block" style="padding: 100px 27.5%; z-index: 2222;">
                 <v-card class="calc-card">
                     <v-container>
                         <v-row>
@@ -68,7 +68,7 @@
                         </v-row>
                     </v-container>
                 </v-card>
-            </section>
+            </div>
     </section>
 
 </template>
@@ -239,7 +239,7 @@ export default {
     .btnHeaderBlock{
         position: absolute;
         width: 100%;
-        max-width: 1200px; 
+        max-width: 1200px;
         z-index: 4;
         display: flex;
         flex-direction: column;
@@ -247,7 +247,7 @@ export default {
         align-items: center;
         margin-top: 120px;
         padding-left: 5%;
-        @include respond-to(medium-screens) { 
+        @include respond-to(medium-screens) {
             justify-content: flex-start;
             align-items: flex-start;
             margin-top: 114px;
@@ -259,7 +259,7 @@ export default {
         h1{
             font-size: 24px;
             line-height: 29px;
-            margin-bottom: 17px; 
+            margin-bottom: 17px;
         }
         p{
             font-size: 16px;
@@ -278,5 +278,12 @@ export default {
         @include respond-to(medium-screens) { background-position: top center; height: 675px; }
         @include respond-to(wide-screens) {  }
     }
+}
+
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background-color: black;
+}
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
+    background-color: #3C3C40;
 }
 </style>

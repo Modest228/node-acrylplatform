@@ -3,7 +3,7 @@
         <div id="targetOffer"></div>
         <v-container>
             <v-row class="height100">
-                <v-col cols="12" offset-sm="5" md="3" style="background-color: white; min-width: 340px; min-height: 377px; max-width: 355px; max-height: 377px; border-radius: 12px; margin-top: auto; margin-bottom: auto;">
+                <v-col cols="12" offset-sm="5" md="3" style="background-color: white; min-width: 364px; min-height: 456px; max-width: 355px; max-height: 528px; border-radius: 12px; margin-top: auto; margin-bottom: auto;">
                                     <h2 class="headSection pb-3 secondaryColor " align="center">{{headSection}}</h2>
                                     <div class="maxWidth">
                                         <v-text-field
@@ -27,7 +27,7 @@
                                             </template>
                                         </v-checkbox>
                                         <div class="d-flex align-center ">
-                                            <v-btn class="border-radius: 12px;" block  color="bbtn secondaryColor" href="#targetSend" @click="formSend()">Отправить</v-btn>
+                                            <v-btn class="border-radius: 12px;" block  href="#targetSend" @click="formSend()">Отправить</v-btn>
                                         </div>
                                     </div>
                                 </v-col>
@@ -102,7 +102,7 @@ export default {
                     .then((response) => {
                         console.log("response", response)
                         this.errorMessage = ''
-                        this.response = 'Мы с вами свяжемся в ближайшее время'
+                        this.response = 'Спасибо за оставленную заявку! Наш менеджер свяжется с Вами в ближайшее время.'
                         this.modalTrue = true;
                         this.name = ''
                         this.phone = ''
@@ -111,7 +111,7 @@ export default {
                     .catch((error) => {
                         console.log(error);
                         this.errorMessage = ''
-                        this.response = 'Мы с вами свяжемся в ближайшее время'
+                        this.response = 'Спасибо за оставленную заявку! Наш менеджер свяжется с Вами в ближайшее время.'
                         this.modalTrue = true;
                         this.name = ''
                         this.phone = ''
@@ -156,6 +156,8 @@ export default {
     }
     .maxWidth{
         max-width: 325px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .responseError{
         padding-top: 10px;
@@ -206,5 +208,12 @@ export default {
         }
     }
   }
+}
+
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background-color: black;
+}
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
+    background-color: #3C3C40;
 }
 </style>

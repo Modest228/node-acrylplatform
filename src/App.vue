@@ -73,7 +73,7 @@ export default {
   data() {
     return {
       menuItems: [
-         {id: 1, text: "Приемущества", link: "#infoblock", target: "_self", click: "Click_more"},
+         {id: 1, text: "Преимущества", link: "#infoblock", target: "_self", click: "Click_more"},
          {id: 2, text: "Инструкция", link: "#instructionblock", target: "_self", click: "Click_more"},
         {id: 2, text: "Acryl Client", link: "#clientblock", target: "_self", click: "Click_more"},
         {id: 3, text: "FAQ", link: "#faq", target: "_self", click: "Click_more"},

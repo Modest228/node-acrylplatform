@@ -76,7 +76,6 @@
             background-size: contain;
         }
         .appstoredownload{
-            min-height: 100px;
             @include respond-to(medium-screens) {
                 max-height: 100px;
                 min-height: 50px;
@@ -86,9 +85,10 @@
             background-position: top center;
             background-repeat: no-repeat;
             background-size: contain;
+            max-width: 166px;
+            max-height: 50px;
         }
         .googledownload{
-            min-height: 100px;
             @include respond-to(medium-screens) {
                 max-height: 100px;
                 min-height: 50px;
@@ -98,6 +98,8 @@
             background-position: top center;
             background-repeat: no-repeat;
             background-size: contain;
+            max-width: 166px;
+            max-height: 50px;
         }
         }
     .height100{

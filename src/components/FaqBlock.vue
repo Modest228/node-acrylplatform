@@ -3,11 +3,6 @@
         <v-container>
             <v-row class="height100">
                 <v-col cols="12" sm="12">
-                    <transition name="fade" mode="out-in">
-                        <button v-bind:key="isEditing">
-                            {{ isEditing ? 'Сохранить' : 'Редактировать' }}
-                        </button>
-                    </transition>
                     <h2 class="headSection pb-3 secondaryColor" align="left">{{headSection}}</h2>
                     <v-expansion-panels value="1" flat class="px-0">
                         <v-expansion-panel v-for="(item, i) in answers" :key="`answer${i}`" active-class="active-primary" >

@@ -455,7 +455,5 @@ export default {
     }
   }
 }
-.v-btn .v-btn__content {
-    color: #3C3C40;
-}
+
 </style>

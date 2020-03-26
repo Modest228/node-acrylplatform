@@ -27,7 +27,7 @@
                             <img src="img/an_step_5.jpg"/>
                         </div>
                     </div>
-                    <v-btn rounded color="bbtn bauto secondaryColor" href="#targetOffer" align="center" @click="Click_more()">Заказать</v-btn>
+                    <v-btn rounded color="bauto" href="#targetOffer" align="center" @click="Click_more()">Заказать</v-btn>
         </v-row>
     </v-container>
   </section>
@@ -88,5 +88,12 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1%;
+}
+
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background-color: black;
+}
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
+    background-color: #3C3C40;
 }
 </style>
