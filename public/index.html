@@ -10,6 +10,7 @@
     <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
     <meta name="theme-color" content="#000000">
     <meta name="Description" content="Acryl современная блокчейн платформа.">
+    <meta name="yandex-verification" content="113eb040a9aef68c" />
 
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>ACRYL | Node</title>
@@ -43,26 +44,25 @@
         </script>
         <script async src='https://www.google-analytics.com/analytics.js'></script>
         <!-- End Google Analytics -->
-    
+
         <!-- Yandex.Metrika counter -->
-        <script type="text/javascript" >
-          (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-          (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-          ym(57691807, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-          });
-
-          window.yaSendButton = (buttonName) => {
-            console.log("yandexClick");
-            ym(61154374, 'reachGoal', buttonName);
-          }
-        </script>
-        <noscript><div><img src="https://mc.yandex.ru/watch/57691807" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+      ym(61154374, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+      });
+      window.yaSendButton = (buttonName) => {
+        console.log("yandexClick");
+        // ym(57691807, 'reachGoal', buttonName);
+      }
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/61154374" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
         
   </body>
