@@ -6,7 +6,7 @@
                 <v-col cols="12" sm="5">
                     <div class="mapImage"></div>
                 </v-col>
-                <v-col cols="12" sm="7">
+                <v-col cols="12" sm="7" class="mede">
                     <div class="describeBlock">
                         <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
                         <p class="py-2 secondaryColor">{{textSection_1}}</p>
@@ -129,4 +129,10 @@ export default {
         }
     }
 }
+@media (max-width: 600px) {
+   .mede {
+       margin-top: -90%;
+   }
+}
+
 </style>

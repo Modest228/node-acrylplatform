@@ -11,11 +11,12 @@
   position: relative;
 }
 .slider{
-  width: 100%;
+  width: 93.75%;
   margin: 0 auto;
   margin-top: 20px;
   position: relative;
   padding: 5px;
+  background-color: #ddd;
   position: relative;
 }
 /*=============СЛАЙДЫ===================*/
@@ -32,11 +33,10 @@
   transition-duration:2s;
   opacity: 1; /*не прозрачная только первая картинка*/
   z-index: 1;
-  margin-top: 12px;
 }
 .img2, .img3, .img4, .img5{
   position: absolute;
-  top: 40px;
+  top: 5px;
   left: 5px;
   right: 5px;
   -webkit-transition-property:opacity, z-index;
@@ -125,20 +125,20 @@ img{
   padding: 10px;
 
 }
-.opis h3{
+.tank h3{
   color: #fff;
   margin: 0;
   margin-bottom: 3px;
   font-family: Times New Roman;
 }
-.opis  p{
+.tank p{
   color: #fff;
   margin: 0;
   font-size: 14px;
   font-family: Times New Roman;
 }
 /*========пауза в анимации при наведении на слайд=========*/
-.slider:hover .opis{
+.slider:hover .tank{
   -moz-animation-play-state: paused;
   -webkit-animation-play-state: paused;
   -o-animation-play-state: paused;
@@ -148,48 +148,41 @@ img{
 
 .but1, .but2, .but3, .but4, .but5 {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 14px;
+  height: 14px;
   background: transparent;
-  bottom: 24px;
+  bottom: 25px;
   left: 50%;
   right: 10px;
   text-align: center;
   cursor: pointer;
   z-index: 1000;
+  box-shadow: -1px -1px 1px 1px rgba(0,0,0, 0.5);
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
-  border-radius: 14px;
+  border-radius: 7px;
   outline:none;
-  margin-bottom: 16%;
 }
 .but1{
-  margin-left: -48%;
+  margin-left: -50px;
 }
 .but2{
-  margin-left: -27%;
-
-}
-.but3{
-  margin-left: -5%;
-
+  margin-left: -25px;
 }
 .but4{
-  margin-left: 17%;
-
+  margin-left: 25px;
 }
 .but5{
-  margin-left: 38%;
-
+  margin-left: 50px;
 }
 .round1, .round2, .round3, .round4, .round5{
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 14px;
+  height: 14px;
   background:   #fff;
-  bottom: 24px;
+  bottom: 25px;
   left: 50%;
   right: 10px;
   text-align: center;
@@ -200,24 +193,20 @@ img{
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
-  border-radius: 14px;
+  border-radius: 7px;
   outline:none;
-  margin-bottom: 16%;
 }
 .round1{
-  margin-left: -48%;
+  margin-left: -50px;
 }
 .round2{
-  margin-left: -27%;
-}
-.round3{
-  margin-left: -5%;
+  margin-left: -25px;
 }
 .round4{
-  margin-left: 17%;
+  margin-left: 25px;
 }
 .round5{
-  margin-left: 38%;
+  margin-left: 50px;
 }
 /*==============Активация при анимации кружка навигации*=================*/
 .round1{
@@ -252,29 +241,29 @@ img{
 }
 @keyframes butAnim {
   0% {background-color: #fff;}
-  8% {background-color: #fff;}
-  17% {background-color: #fedd0e;}
+  8% {background-color: #8699a4;}
+  17% {background-color: #8699a4;}
   25% {background-color: #fff;}
   100% {background-color: #fff;}
 }
 @-webkit-keyframes butAnim {
-  0% {background-color: #fff;}
-  8% {background-color: #fff;}
-  17% {background-color: #fedd0e;}
+  0% {background-color: #8699a4;}
+  8% {background-color: #8699a4;}
+  17% {background-color: #8699a4;}
   25% {background-color: #fff;}
   100% {background-color: #fff;}
 }
 @-o-keyframes butAnim {
   0% {background-color: #fff;}
-  8% {background-color: #fff;}
-  17% {background-color: #fedd0e;}
+  8% {background-color: #8699a4;}
+  17% {background-color: #8699a4;}
   25% {background-color: #fff;}
   100% {background-color: #fff;}
 }
 @-moz-keyframes butAnim {
   0% {background-color: #fff;}
-  8% {background-color: #fff;}
-  17% {background-color: #fedd0e;}
+  8% {background-color: #8699a4;}
+  17% {background-color: #8699a4;}
   25% {background-color: #fff;}
   100% {background-color: #fff;}
 }
@@ -286,7 +275,7 @@ img{
   animation-play-state: paused;
 }
 /*================ДЕЙСТВИя================*/
-.but1:focus ~ .opis, .but2:focus ~ .opis, .but3:focus ~ .opis, .but4:focus ~ .opis, .but5:focus ~ .opis {
+.but1:focus ~ .tank, .but2:focus ~ .tank, .but3:focus ~ .tank, .but4:focus ~ .tank, .but5:focus ~ .tank {
   -moz-animation: none;
   -webkit-animation: none;
   -o-animation: none;
@@ -306,9 +295,9 @@ img{
 
 
 .but1:focus, .but2:focus, .but3:focus, .but4:focus, .but5:focus{
-  background-color:  #fedd0e;
+  background-color:  #8699a4;
 }
-
+/*==========МЕДИАЗАПРОСЫ=================*/
 @media only screen and (max-width:740px) {
   .opis p{
     display: none;
