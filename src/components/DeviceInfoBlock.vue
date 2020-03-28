@@ -2,7 +2,7 @@
     <section class="device-info-block mxw1200" id="infoblock">
         <v-container>
             <v-row class="height100">
-                <v-col sm="12" md="6">
+                <v-col sm="12" md="8">
                     <div class="describeBlock">
                         <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
                         <p class="py-2 secondaryColor">{{textSection_1}}</p>
@@ -13,18 +13,25 @@
                             <!--<v-col v-for="(item, i) in advantages" :key="`advantageItem${i}`" :class="`advantageItem ch grid${item.id}`">-->
                                 <!--<span class="describe">{{item.describe}}</span>-->
                             <!--</v-col>-->
-                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
-                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
-                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
-                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
-                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
-                                    <v-card style="width: 50%"><v-col>Стабильная доходность</v-col> </v-card>
+                                <v-card class="coledit"><v-col><p style="font-weight: bold">Стабильная доходность</p>
+                                    <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
+                                <v-card class="coledit"><v-col><p style="font-weight: bold">Простая установка и обслуживание</p>
+                                    <p class="visedit">Не требует много времени и специальных технических знаний при использовании</p></v-col> </v-card>
+                                <v-card class="coledit"><v-col><p style="font-weight: bold">Гарантия</p>
+                                    <p class="visedit">12 месяцев на устройство + 24 месяца на обслуживание</p></v-col> </v-card>
+                                <v-card class="coledit"><v-col><p style="font-weight: bold">Низкое энергопотребление</p>
+                                    <p class="visedit">60Вт - эквивалент обычной лампочки</p></v-col> </v-card>
+                                <v-card class="coledit"><v-col><p style="font-weight: bold">Компактность и бесшумность</p>
+                                    <p class="visedit">20 x 3.5 x 20 см / Не более 1,5 дБА </p></v-col> </v-card>
+                                <v-card class="coledit"><v-col><p style="font-weight: bold">Удобное приложение Acryl Client</p>
+                                    <p class="visedit">Доступно в AppStore и GooglePlay</p></v-col> </v-card>
                             </v-row>
 
                     </div>
                 </v-col>
-                <container>
-                    <v-row>
+
+                        <v-col cols="6" md="4">
+                            <v-row class="wid100">
                  <div class="slider">
                                <div class="but1 bgbutton1" tabindex="1"></div>
                                <div class="but2 bgbutton2" tabindex="1"></div>
@@ -39,8 +46,8 @@
                                    <img src="img/node_3.jpg"/>
                                </div>
                            </div>
-                    </v-row>
-                </container>
+                            </v-row>
+                        </v-col>
             </v-row>
         </v-container>
     </section>
@@ -142,5 +149,39 @@ export default {
         background-repeat: no-repeat;
         background-size: contain;
             }
+}
+.coledit {
+    width: 50%;
+    height: 90px;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+}
+.coledit:hover {
+    width: 50%;
+    height: 90px;
+    text-align: center;
+    padding: 0px;
+    .visedit {
+        visibility: inherit;
+    }
+}
+.visedit {
+    visibility: hidden;
+    font-size: 12px;
+    }
+.v-card[data-v-b322a76e]:not(.v-sheet--tile):not(.v-card--shaped):hover {
+    background: #fedd0e;
+}
+@media (max-width: 600px) {
+    .coledit{
+      width: 100%;
+    }
+    .coledit:hover{
+        width: 100%;
+    }
+    .wid100 {
+        width: 218%;
+    }
 }
 </style>

@@ -6,26 +6,36 @@
                         <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
             </v-col>
                     <div class="slider">
-                        <div class="but1" tabindex="1"></div>
-                        <div class="but2" tabindex="1"></div>
-                        <div class="but3" tabindex="1"></div>
-                        <div class="but4" tabindex="1"></div>
-                        <div class="but5" tabindex="1"></div>
-                        <div class="img1" >
+                        <v-col class="elevation-1 colpos">
+                        <div class="but1" tabindex="1"><p style="margin-left: 115%;">Заказать</p></div>
+                        <div class="but2" tabindex="1"><p style="margin-left: 115%;">Подключить</p></div>
+                        <div class="but3" tabindex="1"><p style="margin-left: 115%;">Установить</p></div>
+                        <div class="but4" tabindex="1"><p style="margin-left: 115%;">Заработать</p></div>
+                        <div class="but5" tabindex="1"><p style="margin-left: 115%;">Вывести</p></div>
+                            <div class="round1 nav"></div>
+                            <div class="round2 nav"></div>
+                            <div class="round3 nav"></div>
+                            <div class="round4 nav"></div>
+                            <div class="round5 nav"></div>
+                        </v-col>
+
+                        <v-col>
+                        <div class="img1 opis" >
                             <img src="img/an_step_1.jpg"/>
                         </div>
-                        <div class="img2" >
+                        <div class="img2 opis" >
                             <img src="img/an_step_2.jpg"/>
                         </div>
-                        <div class="img3">
+                        <div class="img3 opis">
                             <img src="img/an_step_3.jpg"/>
                         </div>
-                        <div class="img4">
+                        <div class="img4 opis">
                             <img src="img/an_step_4.jpg"/>
                         </div>
-                        <div class="img5">
+                        <div class="img5 opis">
                             <img src="img/an_step_5.jpg"/>
                         </div>
+                        </v-col>
                     </div>
                     <v-btn rounded color="bauto" href="#targetOffer" align="center" @click="Click_more()">Заказать</v-btn>
         </v-row>
@@ -87,7 +97,7 @@
 .bauto {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1%;
+    margin-top: 4%;
 }
 
 .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
@@ -95,5 +105,10 @@
 }
 .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
     background-color: #3C3C40;
+}
+.colpos {
+    width: 100%;
+    height: 30%;
+
 }
 </style>

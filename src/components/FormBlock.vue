@@ -3,7 +3,7 @@
         <div id="targetOffer"></div>
         <v-container>
             <v-row class="height100">
-                <v-col cols="12" offset-sm="5" md="3" style="background-color: white; min-width: 364px; min-height: 456px; max-width: 355px; max-height: 528px; border-radius: 12px; margin-top: auto; margin-bottom: auto;">
+                <v-col cols="12" offset-sm="5" md="3" style="background-color: white; min-width: 364px; min-height: 456px; max-width: 355px; max-height: 528px; border-radius: 12px; margin-top: auto; margin-bottom: auto; margin-left: auto; margin-right: auto;">
                                     <h2 class="headSection pb-3 secondaryColor " align="center">{{headSection}}</h2>
                                     <div class="maxWidth">
                                         <v-text-field

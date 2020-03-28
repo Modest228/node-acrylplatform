@@ -9,7 +9,7 @@
                                 дата-центр по старому курсу доллара<br />
                                 до 31 марта!</p>
                         </div>
-                            <v-btn rounded class="bh" href="#targetOffer" @click="Click_more()">Заказать</v-btn>
+                            <v-btn rounded  href="#targetOffer" @click="Click_more()">Заказать</v-btn>
                     </div>
                 </v-col>
             </v-row>
@@ -285,5 +285,22 @@ export default {
 }
 .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
     background-color: #3C3C40;
+}
+@media (max-width: 600px) {
+    .project-info-block {
+        .mapImage {
+            visibility: hidden;
+        }
+    }
+    .imgflow {
+        .btnHeaderBlock {
+            width: 21%;
+            margin-top: 65px;
+        }
+        .imgHeaderBlock {
+            background-position: top right 50%;
+            position: inherit;
+        }
+    }
 }
 </style>

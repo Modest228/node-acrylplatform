@@ -122,4 +122,11 @@ export default {
 .height100{
     height: 100%;
 }
+@media (max-width: 960px) {
+    .project-info-block {
+        .mapImage {
+            visibility: hidden;
+        }
+    }
+}
 </style>

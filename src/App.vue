@@ -40,7 +40,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title class="title">
-                  <v-btn rounded color="primary secondaryColor" small href="#targetOffer">Заказать</v-btn>
+                  <v-btn rounded small href="#targetOffer">Заказать</v-btn>
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -137,4 +137,11 @@ export default {
 .v-btn__content{
     color: $secondaryColor !important;
 }
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+  background-color: black;
+}
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
+  background-color: #3C3C40;
+}
+
 </style>

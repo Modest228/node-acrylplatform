@@ -2,7 +2,7 @@
     <section id="contacts" class="footer-block">
         <v-container class="Container mxw1200">
             <v-row>
-                <v-col cols='12' sm='6' lg='3'>
+                <v-col cols='12' sm='6' lg='3' class="marwieght">
                     <h4>{{head1}}</h4>
                     <div class="directions">
                         <a v-for="(direction, i) in directions" 
@@ -50,7 +50,7 @@
             </v-row>
             <v-row class="bottomFooterBlock">
                 <v-col cols='12' sm='6' lg='3'>
-                    <div class="directions">
+                    <div class="directions mweight">
                         <a href="#topTarget"><img src="/img/directions/acryl-logo-white.svg"></a>
                     </div>
                 </v-col>
@@ -60,7 +60,7 @@
                         <router-link to="/cookie">Cookie Policy</router-link>
                     </div>
                 </v-col>
-                <v-col cols='12' sm='6' lg='3'>
+                <v-col cols='12' sm='6' lg='3' class="iconwieght">
                     <div class="social">
                         <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`"> 
                             <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
@@ -455,5 +455,16 @@ export default {
     }
   }
 }
-
+@media (max-width: 489px) {
+    .marwieght {
+        margin-top: 27%;
+    }
+    .mweight {
+        margin: -236% 0 !important;
+        position: absolute;
+    }
+    .iconwieght {
+        margin-top: -457%;
+    }
+}
 </style>
