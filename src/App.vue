@@ -40,7 +40,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title class="title">
-                  <v-btn rounded color="primary secondaryColor" small href="#targetOffer">Заказать</v-btn>
+                  <v-btn rounded small href="#targetOffer">Заказать</v-btn>
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -73,9 +73,10 @@ export default {
   data() {
     return {
       menuItems: [
-        // {id: 1, text: "Магазин", link: "https://shop.acrylminer.com/ru/", target: "_blank"},
-        {id: 2, text: "Описание", link: "#targetInfo", target: "_self", click: "Click_more"},
-       // {id: 3, text: "Поддержка", link: "https://support.acrylminer.com/l_rus/", target: "_blank", click: "Submit_support"},
+         {id: 1, text: "Преимущества", link: "#infoblock", target: "_self", click: "Click_more"},
+         {id: 2, text: "Инструкция", link: "#instructionblock", target: "_self", click: "Click_more"},
+        {id: 2, text: "Acryl Client", link: "#clientblock", target: "_self", click: "Click_more"},
+        {id: 3, text: "FAQ", link: "#faq", target: "_self", click: "Click_more"},
         {id: 4, text: "Блог", link: "https://medium.com/acrylplatformru", target: "_blank", click: "Sublit_Blog1"},
        // {id: 5, text: "Контакты", link: "#contacts", target: "_self", click: "Click_contact"}
       ],
@@ -136,4 +137,11 @@ export default {
 .v-btn__content{
     color: $secondaryColor !important;
 }
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+  background-color: black;
+}
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
+  background-color: #3C3C40;
+}
+
 </style>

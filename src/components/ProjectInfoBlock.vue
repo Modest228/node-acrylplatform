@@ -6,12 +6,13 @@
                 <v-col cols="12" sm="5">
                     <div class="mapImage"></div>
                 </v-col>
-                <v-col cols="12" sm="7">
+                <v-col cols="12" sm="7" class="mede">
                     <div class="describeBlock">
                         <h2 class="headSection pb-3 secondaryColor">{{headSection}}</h2>
                         <p class="py-2 secondaryColor">{{textSection_1}}</p>
-                        <p class="py-2 text-bold secondaryColor">{{textSection_2}}</p>
+                        <p class="py-2 secondaryColor">Размести у себя дома компактный и бесшумный дата-центр <a class="py-2 text-bold secondaryColor"> ACRYL Node* </a>, стань частью сети и получай за это вознаграждение.</p>
                         <p class="py-2 secondaryColor">{{textSection_3}}</p>
+                        <p class="py-2 text-bold secondaryColor">{{textSection_4}}</p>
                     </div>
                     <div class="numbersBlock">
                         <div v-for="(indecator, i) in indicators" :key="`indecator${i}`" :class="`indecator grid${indecator.id}`">
@@ -32,12 +33,13 @@ export default {
       return {
             headSection: `Описание проекта`,
             textSection_1: `Наша цель — создать самую распределенную и устойчивую сеть для записи данных бизнеса. `,
-            textSection_2: `Размести у себя дома компактный и бесшумный дата-центр ACRYL Node, стань частью сети и получай за это вознаграждение. `,
+          //  textSection_2: `Размести у себя дома компактный и бесшумный дата-центр ACRYL Node, стань частью сети и получай за это вознаграждение. `,
             textSection_3: `Это новый вид бизнеса в котором мы вместе создаем децентрализованное пространство, где каждый участник получает доход.`,
+            textSection_4: `*До 31 марта действует специальное предложение на приобретение ACRYL Node по старому курсу доллара: $1 = 64₽.`,
             indicators: [
                 {id: 1, number: 10, describe: "стран" },
                 {id: 2, number: 30, describe: "городов"},
-                {id: 3, number: 1000, describe: "устройств"}
+                {id: 3, number: 1100, describe: "устройств"}
             ]
       }
   }
@@ -69,6 +71,22 @@ export default {
         background-position: top center;
         background-repeat: no-repeat;
         background-size: contain; 
+    }
+    .mapImage:hover {
+      //   transform: scale(1.5);
+        background-image: url(/img/map_animate.png);
+        width: 151%;
+        min-height: 250px;
+        @include respond-to(medium-screens) {
+            max-height: 500px;
+            min-height: 410px;
+        }
+        height: 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain; ;
+        margin-left: -48%;
+    //    margin-top: 44%;
     }
     .numbersBlock{
         display: grid;
@@ -104,4 +122,17 @@ export default {
 .height100{
     height: 100%;
 }
+@media (max-width: 960px) {
+    .project-info-block {
+        .mapImage {
+            visibility: hidden;
+        }
+    }
+}
+@media (max-width: 600px) {
+   .mede {
+       margin-top: -90%;
+   }
+}
+
 </style>

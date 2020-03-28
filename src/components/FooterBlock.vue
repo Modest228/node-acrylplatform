@@ -2,7 +2,7 @@
     <section id="contacts" class="footer-block">
         <v-container class="Container mxw1200">
             <v-row>
-                <v-col cols='12' sm='6' lg='3'>
+                <v-col cols='12' sm='6' lg='3' class="marwieght">
                     <h4>{{head1}}</h4>
                     <div class="directions">
                         <a v-for="(direction, i) in directions" 
@@ -17,9 +17,6 @@
                     <div class="menu">
                         <a v-for="(menuItem, i) in footerItems" :key="`menuItem${i}`" :href="`${menuItem.link}`"  @click="`${SubmitBTN(menuItem.click)}`" target="`${menuItem.target}`">
                             {{menuItem.text}}
-                        </a>
-                        <a href="#targetOffer" @click="`${Click_order4()}`" >
-                            Заказать
                         </a>
                     </div>                    
                 </v-col>
@@ -47,13 +44,13 @@
                                 <span @click.stop class="agreeCheckLabel" v-html="agreeCheckLabel"></span>
                             </template>
                         </v-checkbox>
-                        <v-btn rounded outlined dark @click="formSubSend()">Отправить</v-btn>
-                    </div>                    
+                        <v-btn rounded outlined href="#targetSubscription" dark @click="formSubSend() ">Подписаться</v-btn>
+                    </div>
                 </v-col>
             </v-row>
             <v-row class="bottomFooterBlock">
                 <v-col cols='12' sm='6' lg='3'>
-                    <div class="directions">
+                    <div class="directions mweight">
                         <a href="#topTarget"><img src="/img/directions/acryl-logo-white.svg"></a>
                     </div>
                 </v-col>
@@ -63,7 +60,7 @@
                         <router-link to="/cookie">Cookie Policy</router-link>
                     </div>
                 </v-col>
-                <v-col cols='12' sm='6' lg='3'>
+                <v-col cols='12' sm='6' lg='3' class="iconwieght">
                     <div class="social">
                         <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`"> 
                             <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
@@ -122,6 +119,7 @@ export default {
               {id: 1, img: "Logo_ACRYL_Platform", link: "https://acrylplatform.com/", click: "Submit_platform"},
               {id: 2, img: "Logo_ACRYL_1C_Integration", link: "https://1c.acrylplatform.com/", click: "Submit_1c"},
               {id: 3, img: "Logo_ACRYL_CDN", link: "https://cdn.acrylplatform.com/", click: "Submit_CDN"},
+              {id: 4, img: "Logo_ACRYL_Enterprise", link: "https://enterprise.acrylplatform.com/", click: "Submit_Enterprise"},
           ],
           head2: "Меню",
           head3: "Контакты",
@@ -136,12 +134,12 @@ export default {
           ],
           email: '',
           agreeCheckLabel: `
-            Нажимая кнопку «Отправить», я даю
+            Нажимая кнопку «Подписаться», я даю
             согласие на обработку своих
             персональных данных в соответствии с
             <a href="/privacy" style="color: #2EA9FB;">Политикой конфиденциальности</a>, а также
             соглашаюсь получать информацию о
-            скидках и специальных предложениях на
+            специальных предложениях на
             указанный e-mail и телефон.`,
           agreeCheck: false,
           modalTrue: false,
@@ -229,6 +227,9 @@ export default {
             case 'Submit_CDN':
                 this.Submit_CDN()
                 break;
+                case 'Submit_Enterprise':
+                    this.Submit_Enterprise()
+                    break;
             default:
                 break;
             }
@@ -317,7 +318,12 @@ export default {
             console.log("Submit_CDN")
             window.gaSendButton("Submit_CDN");
             window.yaSendButton("Submit_CDN");         
-        }
+        },
+      Submit_Enterprise(){
+          console.log("Submit_Enterprise")
+          window.gaSendButton("Submit_Enterprise");
+          window.yaSendButton("Submit_Enterprise");
+      }
   },
 }
 </script>
@@ -339,7 +345,7 @@ export default {
         align-items: flex-start;
         margin: 20px 0;
         img{
-            height: 20px; 
+            height: 20px;
             margin: 10px 0;
         }
     }
@@ -448,5 +454,17 @@ export default {
         }
     }
   }
+}
+@media (max-width: 489px) {
+    .marwieght {
+        margin-top: 27%;
+    }
+    .mweight {
+        margin: -236% 0 !important;
+        position: absolute;
+    }
+    .iconwieght {
+        margin-top: -457%;
+    }
 }
 </style>

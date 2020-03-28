@@ -3,12 +3,11 @@
         <main-block></main-block>
         <project-info-block></project-info-block>
         <device-info-block></device-info-block>
+        <compare-block></compare-block>
         <instruction-block></instruction-block>
-        <calc-block></calc-block>
-        <how-it-work-block></how-it-work-block>
+        <client-block></client-block>
         <faq-block :addressItems="addressItems"></faq-block>
         <form-block></form-block>
-        <map-block :addressItems="addressItems"></map-block>
     </div>
 </template>
 
@@ -16,12 +15,11 @@
 import MainBlock from '@/components/MainBlock'
 import ProjectInfoBlock from '@/components/ProjectInfoBlock'
 import DeviceInfoBlock from '@/components/DeviceInfoBlock'
+import CompareBlock from '@/components/CompareBlock'
 import InstructionBlock from '@/components/InstructionBlock'
-import CalcBlock from '@/components/CalcBlock'
-import HowItWorkBlock from '@/components/HowItWorkBlock'
+import ClientBlock from '@/components/ClientBlock'
 import FaqBlock from '@/components/FaqBlock'
 import FormBlock from '@/components/FormBlock'
-import MapBlock from '@/components/MapBlock'
 
 export default {
   name: 'App',
@@ -30,12 +28,11 @@ export default {
     MainBlock,
     ProjectInfoBlock,
     DeviceInfoBlock,
+    CompareBlock,
     InstructionBlock,
-    CalcBlock,
-    HowItWorkBlock,
+    ClientBlock,
     FaqBlock,
-    FormBlock,
-    MapBlock
+    FormBlock
   },
 
   data() {
