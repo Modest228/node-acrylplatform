@@ -6,7 +6,7 @@
                     <h2 class="headSection pb-3 secondaryColor" align="left">{{headSection}}</h2>
                     <v-expansion-panels value="1" flat class="px-0">
                         <v-expansion-panel v-for="(item, i) in answers" :key="`answer${i}`" active-class="active-primary" >
-                            <v-expansion-panel-header class="px-0 elevation-2" >{{item.text}}</v-expansion-panel-header>
+                            <v-expansion-panel-header class="px-1 elevation-2" >{{item.text}}</v-expansion-panel-header>
                             <v-expansion-panel-content class="px-0">
                                 <div class="contentAnswer">
                                     <v-card class="mx-auto pa-2">
@@ -20,13 +20,13 @@
 
                     <v-expansion-panels value="1" flat class="px-0">
                         <v-expansion-panel v-for="(item, i) in answersv2" :key="`answer${i}`">
-                            <v-expansion-panel-header class="px-0 elevation-2" >{{item.text}}</v-expansion-panel-header>
+                            <v-expansion-panel-header class="px-1 elevation-2" >{{item.text}}</v-expansion-panel-header>
                             <v-expansion-panel-content class="px-0">
                                 <div class="contentAnswer">
                                     <v-card class="mx-auto pa-2">
                                         <v-expansion-panels value="1" flat class="px-0">
                                         <v-expansion-panel v-for="(item, i) in answersv3" :key="`answer${i}`" active-class="active-primary" >
-                                            <v-expansion-panel-header class="px-0 elevation-2" >{{item.text}}</v-expansion-panel-header>
+                                            <v-expansion-panel-header class="px-1 elevation-2" >{{item.text}}</v-expansion-panel-header>
                                             <v-expansion-panel-content class="px-0">
                                                 <div class="contentAnswer">
                                                     <v-card class="mx-auto pa-2">
