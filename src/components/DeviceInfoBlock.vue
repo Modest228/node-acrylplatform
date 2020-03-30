@@ -162,6 +162,7 @@ export default {
     height: 90px;
     text-align: center;
     padding: 0px;
+    background: #fedd0e !important;
     .visedit {
         visibility: inherit;
     }
@@ -170,9 +171,6 @@ export default {
     visibility: hidden;
     font-size: 12px;
     }
-.v-card[data-v-b322a76e]:not(.v-sheet--tile):not(.v-card--shaped):hover {
-    background: #fedd0e;
-}
 @media (max-width: 600px) {
     .coledit{
       width: 100%;

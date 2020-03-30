@@ -5,33 +5,44 @@
                 <v-col cols="12" sm="12">
                     <h2 class="headSection pb-3 secondaryColor" align="left">{{headSection}}</h2>
                     <v-expansion-panels value="1" flat class="px-0">
-                        <v-expansion-panel :key="`answer1`">
-                            <v-expansion-panel-header class="px-0 elevation-2">{{headSection}}</v-expansion-panel-header>
+                        <v-expansion-panel v-for="(item, i) in answers" :key="`answer${i}`" active-class="active-primary" >
+                            <v-expansion-panel-header class="px-0 elevation-2" >{{item.text}}</v-expansion-panel-header>
                             <v-expansion-panel-content class="px-0">
-                                <v-expansion-panels value="1" flat class="px-0">
-                                    <v-expansion-panel
-                                            v-for="(item, i) in answers"
-                                            :key="`answer${i}`"
-                                            active-class="active-primary"
-                                    >
-                                        <v-expansion-panel-header class="px-0 elevation-2">{{item.text}}</v-expansion-panel-header>
-                                        <v-expansion-panel-content class="px-0">
-                                            <div class="contentAnswer">
-                                                <v-card class="mx-auto pa-2">
-                                                    <span class="phoneAnswer" v-html="item.answer"></span>
-                                                    <a
-                                                            class="phoneAnswer"
-                                                            v-if="item.phone"
-                                                            :href="`tel:${addressItems.numberLink}`"
-                                                    >{{addressItems.number}}</a>
-                                                </v-card>
-                                            </div>
-                                        </v-expansion-panel-content>
-                                    </v-expansion-panel>
-                                </v-expansion-panels>
+                                <div class="contentAnswer">
+                                    <v-card class="mx-auto pa-2">
+                                        <span class="phoneAnswer" v-html="item.answer"></span>
+                                        <a class="phoneAnswer" v-if="item.phone" :href="`tel:${addressItems.numberLink}`">{{addressItems.number}}</a>
+                                    </v-card>
+                                </div>
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                     </v-expansion-panels>
+
+                    <v-expansion-panels value="1" flat class="px-0">
+                        <v-expansion-panel v-for="(item, i) in answersv2" :key="`answer${i}`">
+                            <v-expansion-panel-header class="px-0 elevation-2" >{{item.text}}</v-expansion-panel-header>
+                            <v-expansion-panel-content class="px-0">
+                                <div class="contentAnswer">
+                                    <v-card class="mx-auto pa-2">
+                                        <v-expansion-panels value="1" flat class="px-0">
+                                        <v-expansion-panel v-for="(item, i) in answersv3" :key="`answer${i}`" active-class="active-primary" >
+                                            <v-expansion-panel-header class="px-0 elevation-2" >{{item.text}}</v-expansion-panel-header>
+                                            <v-expansion-panel-content class="px-0">
+                                                <div class="contentAnswer">
+                                                    <v-card class="mx-auto pa-2">
+                                                        <span class="phoneAnswer" v-html="item.answer"></span>
+                                                        <a class="phoneAnswer" v-if="item.phone" :href="`tel:${addressItems.numberLink}`">{{addressItems.number}}</a>
+                                                    </v-card>
+                                                </div>
+                                            </v-expansion-panel-content>
+                                        </v-expansion-panel>
+                                        </v-expansion-panels>
+                                    </v-card>
+                                </div>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                    </v-expansion-panels>
+
                 </v-col>
             </v-row>
         </v-container>
@@ -40,15 +51,15 @@
 
 <script>
     export default {
-        name: "FaqBlock",
-        props: ["addressItems"],
-        data() {
+        name: 'FaqBlock',
+        props: ['addressItems'],
+        data(){
             return {
                 headSection: `FAQ`,
                 answers: [
                     {
                         id: 0,
-                        text: `Что такое блокчейн`,
+                        text: `Что такое блокчейн?`,
                         answer: `Выстроенная по определённым правилам непрерывная последовательная цепочка блоков, содержащих информацию. Связь между блоками обеспечивается не только нумерацией, но и тем, что каждый блок содержит свою собственную хеш-сумму и хеш-сумму предыдущего блока.`,
                         phone: false
                     },
@@ -76,10 +87,17 @@
                         answer: `Держатели устройств Acryl Node формируют распределенную и устойчивую сеть для записи данных бизнеса, а клиенты B2B, в свою очередь, платят за использование блокчейн Acryl.`,
                         phone: false
                     },
+                   ],
+                answersv2: [
+                    {id: 0, text: `Ещё`,
+                        answer: ``,
+                        phone: false},
+                ],
+                answersv3: [
                     {
                         id: 5,
                         text: `Как заказать Acryl Node? Какой срок и условия доставки?`,
-                            answer: `Заказать устройство можно, оставив заявку в форме обратной связи или позвонив по номеру: <a style="color: #3C3C40 !important; text-decoration: none;" href="tel:+78005113715">8 (800) 511-3715</a> или написать на почту <a href="mailto:sales@acrylplatform.com">sales@acrylplatform.com</a>. Наши сотрудники помогут вам с оформлением заказа, а также проконсультруют по любым вопросам.
+                        answer: `Заказать устройство можно, оставив заявку в форме обратной связи или позвонив по номеру: <a style="color: #3C3C40 !important; text-decoration: none;" href="tel:+78005113715">8 (800) 511-3715</a> или написать на почту <a href="mailto:sales@acrylplatform.com">sales@acrylplatform.com</a>. Наши сотрудники помогут вам с оформлением заказа, а также проконсультруют по любым вопросам.
 Доставим ваш заказ БЕСПЛАТНО в течение 10 дней во все города, где осуществляет услуги транспортная компания СDЕК:  <a href="https://www.cdek.ru/">https://www.cdek.ru/</a>.
                                <ul>
                                <li>Доставка по РФ занимает до 5 рабочих дней. </li>
@@ -133,18 +151,18 @@
                         phone: false
                     }
                 ]
-            };
+            }
         }
-    };
+    }
 </script>
 
 <style lang="scss" scoped>
     @import "../assets/styles/index.scss";
-    .faq-block {
+    .faq-block{
         width: 100%;
         display: flex;
         padding: 20px 10px;
-        .mapImage {
+        .mapImage{
             background-image: url(/img/FAQ_Node.png);
             width: 100%;
             min-height: 250px;
@@ -158,33 +176,27 @@
             background-size: contain;
         }
     }
-    .contentAnswer {
+    .contentAnswer{
         margin-left: -24px;
         margin-right: -24px;
-        a {
+        a{
             color: $secondaryColor !important;
             text-decoration: none;
         }
     }
-    .active-primary {
-        button {
+    .active-primary{
+        button{
             color: $primaryTextColor;
         }
     }
-    .height100 {
+    .height100{
         height: 100%;
     }
 
-    .fade-enter-active,
-    .fade-leave-active {
-        transition: opacity 0.5s;
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
     }
     .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
         opacity: 0;
-    }
-    .v-expansion-panel-content {
-        .v-expansion-panel-content__wrap {
-            padding: 0 0 0;
-        }
     }
 </style>

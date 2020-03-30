@@ -455,16 +455,34 @@ export default {
     }
   }
 }
-@media (max-width: 489px) {
+@media (max-width: 464px) {
     .marwieght {
         margin-top: 27%;
     }
     .mweight {
-        margin: -236% 0 !important;
+        margin: -234% 0 !important;
         position: absolute;
     }
     .iconwieght {
-        margin-top: -457%;
+        margin-top: -453%;
+    }
+}
+@media (max-width: 414px) {
+    .mweight {
+        margin: -262% 0 !important;
+        position: absolute;
+    }
+    .iconwieght {
+        margin-top: -509%;
+    }
+}
+@media (max-width: 375px) {
+    .mweight {
+        margin: -287% 0 !important;
+        position: absolute;
+    }
+    .iconwieght {
+        margin-top: -561%;
     }
 }
 </style>
