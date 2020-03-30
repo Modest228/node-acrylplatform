@@ -25,26 +25,27 @@
               </v-list-item>
               <v-divider></v-divider>
           </div>
+          <div class="bottomBlock">
+            <v-divider></v-divider>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title class="title">
+                  <a :href="`tel:${addressItems.numberLink}`" class="noDecoration secondaryColor" >{{addressItems.number}}</a>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+            <v-divider></v-divider>
+            <v-list-item>
+              <v-list-item-content>
+                <v-list-item-title class="title">
+                  <v-btn rounded small href="#targetOffer">Заказать</v-btn>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </div>
         </div>
 
-        <div class="bottomBlock">
-          <v-divider></v-divider>
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title class="title">
-                  <a :href="`tel:${addressItems.numberLink}`" class="noDecoration secondaryColor" >{{addressItems.number}}</a>
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-divider></v-divider>
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title class="title">
-                  <v-btn rounded small href="#targetOffer">Заказать</v-btn>
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </div>
+
       </div>
     </v-navigation-drawer>
 

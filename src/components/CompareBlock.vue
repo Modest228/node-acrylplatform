@@ -2,7 +2,7 @@
     <section>
         <v-container style="max-width: 1185px;">
             <h2 class="headSection pb-3 secondaryColor" align="left">Сравнение PoS и PoW</h2>
-            <table class="elevation-1" style="width:100%">
+            <table class="elevation-1" style="width:100%; background: #e9e9e9">
 
             <tr>
                 <th align="left">АЛГОРИТМ</th>
