@@ -53,11 +53,24 @@ body{
   margin-right: auto;
 }
 
+h1, h2 {
+  font-weight: 500;
+}
+
 .v-card:not(.v-sheet--tile):not(.v-card--shaped) {
   background: #FBFBFB;
 }
 
 .CheckBoxUp .v-input__control .v-input__slot{
+  align-items: flex-start !important;
+}
+
+.v-input--selection-controls .v-input__slot > .v-label, .v-input--selection-controls .v-radio > .v-label {
+  font-size: 11px !important;
+  line-height: 12px;
+}
+
+.v-input__control .v-input__slot {
   align-items: flex-start !important;
 }
 
@@ -103,6 +116,10 @@ body{
 
 .v-text-field {
   padding-top: 31px;
+}
+
+.v-expansion-panel-content__wrap {
+  padding: 0 24px 0px !important;
 }
 
 b, strong {

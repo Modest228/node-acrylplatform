@@ -44,14 +44,14 @@
                                 <span @click.stop class="agreeCheckLabel" v-html="agreeCheckLabel"></span>
                             </template>
                         </v-checkbox>
-                        <v-btn rounded outlined href="#targetSubscription" dark @click="formSubSend() ">Подписаться</v-btn>
+                        <v-btn style="border-radius: 3px;" rounded outlined href="#targetSubscription" dark @click="formSubSend() ">Подписаться</v-btn>
                     </div>
                 </v-col>
             </v-row>
             <v-row class="bottomFooterBlock">
                 <v-col cols='12' sm='6' lg='3'>
                     <div class="directions mweight">
-                        <a href="#topTarget"><img src="/img/directions/acryl-logo-white.svg"></a>
+                        <a href="#topTarget"><img class="mimg" src="/img/directions/acryl-logo-white.svg"></a>
                     </div>
                 </v-col>
                 <v-col cols='12' sm='6' lg='3'>
@@ -466,6 +466,27 @@ export default {
     .iconwieght {
         margin-top: -453%;
     }
+    .mxw1200 {
+        text-align: center;
+    }
+    .footer-block {
+        .directions {
+            align-items: center;
+        }
+        .subscription {
+            margin: 20px auto;
+        }
+        .social {
+            justify-content: center;
+        }
+        .polit {
+            justify-content: center;
+        }
+    }
+    .mimg {
+        margin-left: 70% !important;
+    }
+
 }
 @media (max-width: 414px) {
     .mweight {

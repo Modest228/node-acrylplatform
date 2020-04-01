@@ -77,8 +77,7 @@
         }
         .appstoredownload{
             @include respond-to(medium-screens) {
-                max-height: 100px;
-                min-height: 50px;
+                max-height: 160px;
                 margin-left: 3%;
             }
             height: 100%;
@@ -90,8 +89,7 @@
         }
         .googledownload{
             @include respond-to(medium-screens) {
-                max-height: 100px;
-                min-height: 50px;
+                max-height: 160px;
                 margin-top: 2%;
             }
             height: 100%;

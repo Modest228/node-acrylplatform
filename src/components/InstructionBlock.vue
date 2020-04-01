@@ -9,11 +9,11 @@
                     <div class="wrap">
                         <div class="slider">
                             <v-col class="elevation-1 colpos"></v-col>
-                            <div class="but1" tabindex="1"><p>1</p><p  class="pedit">Заказать</p></div>
-                            <div class="but2" tabindex="1"><p>2</p><p class="pedit">Подключить</p></div>
-                            <div class="but3" tabindex="1"><p>3</p><p class="pedit">Установить</p></div>
-                            <div class="but4" tabindex="1"><p>4</p><p class="pedit">Заработать</p></div>
-                            <div class="but5" tabindex="1"><p>5</p><p class="pedit">Вывести</p></div>
+                            <div class="but1" tabindex="1"><p class="t1">1</p><p  class="pedit">Заказать</p></div>
+                            <div class="but2" tabindex="1"><p class="t2">2</p><p class="pedit">Подключить</p></div>
+                            <div class="but3" tabindex="1"><p class="t3">3</p><p class="pedit">Установить</p></div>
+                            <div class="but4" tabindex="1"><p class="t4">4</p><p class="pedit">Заработать</p></div>
+                            <div class="but5" tabindex="1"><p class="t5">5</p><p class="pedit">Вывести</p></div>
                             <div class="round1 nav"></div>
                             <div class="round2 nav"></div>
                             <div class="round3 nav"></div>

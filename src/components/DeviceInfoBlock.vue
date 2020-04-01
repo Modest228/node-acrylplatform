@@ -13,18 +13,52 @@
                             <!--<v-col v-for="(item, i) in advantages" :key="`advantageItem${i}`" :class="`advantageItem ch grid${item.id}`">-->
                                 <!--<span class="describe">{{item.describe}}</span>-->
                             <!--</v-col>-->
-                                <v-card class="coledit"><v-col><p style="font-weight: bold">Стабильная доходность</p>
-                                    <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
-                                <v-card class="coledit"><v-col><p style="font-weight: bold">Простая установка и обслуживание</p>
-                                    <p class="visedit">Не требует много времени и специальных технических знаний при использовании</p></v-col> </v-card>
-                                <v-card class="coledit"><v-col><p style="font-weight: bold">Гарантия</p>
-                                    <p class="visedit">12 месяцев на устройство + 24 месяца на обслуживание</p></v-col> </v-card>
-                                <v-card class="coledit"><v-col><p style="font-weight: bold">Низкое энергопотребление</p>
-                                    <p class="visedit">60Вт - эквивалент обычной лампочки</p></v-col> </v-card>
-                                <v-card class="coledit"><v-col><p style="font-weight: bold">Компактность и бесшумность</p>
-                                    <p class="visedit">20 x 3.5 x 20 см / Не более 1,5 дБА </p></v-col> </v-card>
-                                <v-card class="coledit"><v-col><p style="font-weight: bold">Удобное приложение Acryl Client</p>
-                                    <p class="visedit">Доступно в AppStore и GooglePlay</p></v-col> </v-card>
+
+                                <!--<div>-->
+                                  <!--<v-col md="4">-->
+                                <!--<v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>-->
+                                    <!--<p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>-->
+                                <!--<v-card class="coledit"><v-col><p class="pedit">Простая установка и обслуживание</p>-->
+                                    <!--<p class="visedit">Не требует много времени и специальных технических знаний при использовании</p></v-col> </v-card>-->
+                                <!--<v-card class="coledit"><v-col><p class="pedit">Гарантия</p>-->
+                                    <!--<p class="visedit">12 месяцев на устройство + 24 месяца на обслуживание</p></v-col> </v-card>-->
+                                  <!--</v-col>-->
+                                <!--</div>-->
+                                <!--<div>-->
+                                    <!--<v-col md="4">-->
+                                <!--<v-card class="coledit"><v-col><p class="pedit">Низкое энергопотребление</p>-->
+                                    <!--<p class="visedit">60Вт - эквивалент обычной лампочки</p></v-col> </v-card>-->
+                                <!--<v-card class="coledit"><v-col><p class="pedit">Компактность и бесшумность</p>-->
+                                    <!--<p class="visedit">20 x 3.5 x 20 см / Не более 1,5 дБА </p></v-col> </v-card>-->
+                                <!--<v-card class="coledit"><v-col><p class="pedit">Удобное приложение Acryl Client</p>-->
+                                    <!--<p class="visedit">Доступно в AppStore и GooglePlay</p></v-col> </v-card>-->
+                                    <!--</v-col>-->
+                                <!--</div>-->
+                                <v-col  cols="12" sm="10" offset-sm="1">
+                                    <div cols="6" md="6">
+                                        <div class=""><span>
+                                        <v-card class="coledit"><v-col>
+                                            <p class="pedit">Стабильная доходность</p>
+                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col>
+                                        </v-card>
+                                                <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
+                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
+                                                <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
+                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
+                                        </span></div>
+                                    </div>
+                                    <div cols="6" md="6">
+                                        <div class=""><span>
+                                          <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
+                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
+                                                <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
+                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
+                                                <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
+                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
+                                        </span></div>
+                                    </div>
+                                </v-col>
+
                             </v-row>
 
                     </div>
@@ -60,7 +94,7 @@ export default {
   data(){
       return {
             headSection: `Преимущества ACRYL Node`,
-            textSection_1: `ACRYL Node – экономичен и нуждается в потреблении энергии, сравнимом с обычной лампочкой. 
+            textSection_1: `ACRYL Node – экономичен и нуждается в потреблении энергии, сравнимом с обычной лампочкой.
                             Никаких сложных действий, простые шаги для того, чтобы начать зарабатывать. Текущая доходность от $150 в месяц. `,
             advantages: [
                 {id: 1, icon: "icon_dollar", describe: "Стабильная доходность" },
@@ -74,7 +108,7 @@ export default {
   },
   methods: {
     Click_order2(){
-      console.log("CLICK_ORDER")
+      console.log("CLICK_ORDER");
       window.gaSendButton("Click_order2");
       window.yaSendButton("Click_order2");
     }
@@ -93,14 +127,14 @@ export default {
         background-image: url(/img/NodeImg.png);
         width: 100%;
         min-height: 250px;
-        @include respond-to(medium-screens) { 
+        @include respond-to(medium-screens) {
             max-height: 500px;
             min-height: 500px;
         }
         height: 100%;
         background-position: top center;
         background-repeat: no-repeat;
-        background-size: contain; 
+        background-size: contain;
     }
     .advantagesBlock{
         .advantageItem{
@@ -156,6 +190,7 @@ export default {
     text-align: center;
     padding: 15px;
     font-size: 16px;
+    padding: 10px;
 }
 .coledit:hover {
     width: 50%;
@@ -167,9 +202,15 @@ export default {
         visibility: inherit;
     }
 }
+
+.pedit {
+    font-weight: 500;
+    padding-top: 4px;
+}
 .visedit {
     visibility: hidden;
     font-size: 12px;
+    margin-top: -10px;
     }
 @media (max-width: 600px) {
     .coledit{
