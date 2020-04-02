@@ -21,7 +21,7 @@
                             <div class="round5 nav"></div>
                             <div class="img1 opis" >
                                 <img class="ini" src="img/an_step_1.jpg"/>
-                                <img class="hii" src="img/an_step_1m.jpg"/>
+                                <img class="hii" src="img/an_step_5m.jpg"/>
                             </div>
                             <div class="img2 opis" >
                                 <img class="ini" src="img/an_step_2.jpg"/>
@@ -29,15 +29,15 @@
                             </div>
                             <div class="img3 opis">
                                 <img class="ini" src="img/an_step_3.jpg"/>
-                                <img class="hii" src="img/an_step_3m.jpg"/>
+                                <img class="hii" src="img/an_step_4m.jpg"/>
                             </div>
                             <div class="img4 opis">
                                 <img class="ini" src="img/an_step_4.jpg" />
-                                <img class="hii" src="img/an_step_4m.jpg"/>
+                                <img class="hii" src="img/an_step_3m.jpg"/>
                             </div>
                             <div class="img5 opis">
                                 <img class="ini" src="img/an_step_5.jpg"/>
-                                <img class="hii" src="img/an_step_5m.jpg"/>
+                                <img class="hii" src="img/an_step_1m.jpg"/>
                             </div>
                         </div>
                     </div>
@@ -120,12 +120,13 @@
 }
 .hii {
     visibility: hidden;
+    position: absolute;
 }
 .wrap {
  max-width: 1280px;
 }
 .mbtn {
-    margin-top: -35%;
+    margin-top: -1%;
 }
 @media (max-width: 600px) {
     .pedit {
@@ -143,14 +144,14 @@
         margin-left: -15%;
     }
     .mbtn {
-        margin-top: 0%;
+        margin-top: 14%;
         margin-left: 31%;
     }
 }
 @media (max-width: 500px) {
     .hii {
         min-width: 800px;
-        margin-left: -27%;
+        margin-left: -165%;
     }
 }
 </style>

@@ -107,7 +107,7 @@ export default {
   display: flex;
   align-items: center;
   overflow: hidden;
-  width: 89px;
+  width: 138px;
   padding-top: 2px;
   @include respond-to(medium-screens) {width: 220px;}
   .widthMobil{

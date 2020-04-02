@@ -149,7 +149,7 @@ img{
   width: 25px;
   height: 25px;
   background: transparent;
-  bottom: 58%;
+  bottom: 10%;
   left: 50%;
   right: 10px;
   text-align: center;
@@ -191,7 +191,7 @@ img{
   width: 25px;
   height: 25px;
   background: #202020;
-  bottom: 58%;
+  bottom: 10%;
   left: 50%;
   right: 10px;
   text-align: center;
@@ -355,32 +355,47 @@ img{
     font-size: 14px;
     text-align: center;
   }
-}
-  @media  (max-width:740px) {
-    .round5 {
-      margin-left: -10%;
-    }
-    .but5 {
-      margin-left: -10%;
-    }
-    .round4 {
-      margin-left: -19%;
-    }
-    .but4 {
-      margin-left: -19%;
-    }
-    .round3 {
-      margin-left: -29%;
-    }
-    .but3 {
-      margin-left: -29%;
-    }
-    .round2 {
-      margin-left: -39%;
-    }
-    .but2 {
-      margin-left: -39%;
-    }
+  .round1, .round2, .round3, .round4, .round5 {
+    bottom: 28%;
   }
+  .but1, .but2, .but3, .but4, .but5 {
+    bottom: 28%;
+  }
+  .round1{
+    margin-left: -31%;
+  }
+  .round2{
+    margin-left: -18%;
+  }
+  .round3{
+    margin-left: -4%;
+  }
+  .round4{
+    margin-left: 10%;
+  }
+  .round5{
+    margin-left: 23%;
+  }
+  .but1{
+    margin-left: -31%;
+  }
+  .but2{
+    margin-left: -18%;
+
+  }
+  .but3{
+    margin-left: -4%;
+
+  }
+  .but4{
+    margin-left: 10%;
+
+  }
+  .but5{
+    margin-left: 23%;
+
+  }
+}
+
 
 
