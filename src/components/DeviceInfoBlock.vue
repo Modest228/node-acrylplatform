@@ -14,50 +14,27 @@
                                 <!--<span class="describe">{{item.describe}}</span>-->
                             <!--</v-col>-->
 
-                                <!--<div>-->
-                                  <!--<v-col md="4">-->
-                                <!--<v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>-->
-                                    <!--<p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>-->
-                                <!--<v-card class="coledit"><v-col><p class="pedit">Простая установка и обслуживание</p>-->
-                                    <!--<p class="visedit">Не требует много времени и специальных технических знаний при использовании</p></v-col> </v-card>-->
-                                <!--<v-card class="coledit"><v-col><p class="pedit">Гарантия</p>-->
-                                    <!--<p class="visedit">12 месяцев на устройство + 24 месяца на обслуживание</p></v-col> </v-card>-->
-                                  <!--</v-col>-->
-                                <!--</div>-->
-                                <!--<div>-->
-                                    <!--<v-col md="4">-->
-                                <!--<v-card class="coledit"><v-col><p class="pedit">Низкое энергопотребление</p>-->
-                                    <!--<p class="visedit">60Вт - эквивалент обычной лампочки</p></v-col> </v-card>-->
-                                <!--<v-card class="coledit"><v-col><p class="pedit">Компактность и бесшумность</p>-->
-                                    <!--<p class="visedit">20 x 3.5 x 20 см / Не более 1,5 дБА </p></v-col> </v-card>-->
-                                <!--<v-card class="coledit"><v-col><p class="pedit">Удобное приложение Acryl Client</p>-->
-                                    <!--<p class="visedit">Доступно в AppStore и GooglePlay</p></v-col> </v-card>-->
-                                    <!--</v-col>-->
-                                <!--</div>-->
-                                <v-col  cols="12" sm="10" offset-sm="1">
-                                    <div cols="6" md="6">
-                                        <div class=""><span>
-                                        <v-card class="coledit"><v-col>
+                                    <v-col cols="12" md="6" class="cedit">
+                                        <v-card class="coledit" style="margin-bottom: 10px;"><v-col>
                                             <p class="pedit">Стабильная доходность</p>
                                           <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col>
                                         </v-card>
-                                                <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
-                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
-                                                <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
-                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
-                                        </span></div>
-                                    </div>
-                                    <div cols="6" md="6">
-                                        <div class=""><span>
-                                          <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
-                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
-                                                <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
-                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
-                                                <v-card class="coledit"><v-col><p class="pedit">Стабильная доходность</p>
-                                          <p class="visedit">Вывод средств в любой момент посредством внутренней биржи платформы</p></v-col> </v-card>
-                                        </span></div>
-                                    </div>
-                                </v-col>
+                                        <v-card class="coledit" style="margin-bottom: 10px;"><v-col><p class="pedit">Гарантия</p>
+                                            <p class="visedit">12 месяцев на устройство + 24 месяца на обслуживание</p></v-col> </v-card>
+                                        <v-card class="coledit"><v-col><p class="pedit">Компактность и бесшумность</p>
+                                            <p class="visedit">20 x 3.5 x 20 см / Не более 1,5 дБА </p></v-col> </v-card>
+
+
+                                    </v-col>
+                                    <v-col cols="12" md="6" class="ceditv2">
+                                        <v-card class="coledit" style="margin-bottom: 10px;"><v-col><p class="pedit">Простая установка и обслуживание</p>
+                                            <p class="visedit">Не требует много времени и специальных технических знаний при использовании</p></v-col> </v-card>
+                                          <v-card class="coledit" style="margin-bottom: 10px;"><v-col><p class="pedit">Низкое энергопотребление</p>
+                                          <p class="visedit">60Вт - эквивалент обычной лампочки</p></v-col> </v-card>
+                                                <v-card class="coledit"><v-col><p class="pedit">Удобное приложение Acryl Client</p>
+                                          <p class="visedit">Доступно в AppStore и GooglePlay</p></v-col> </v-card>
+                                    </v-col>
+
 
                             </v-row>
 
@@ -185,7 +162,7 @@ export default {
             }
 }
 .coledit {
-    width: 50%;
+    width: 100%;
     height: 90px;
     text-align: center;
     padding: 15px;
@@ -193,7 +170,7 @@ export default {
     padding: 10px;
 }
 .coledit:hover {
-    width: 50%;
+    width: 100%;
     height: 90px;
     text-align: center;
     padding: 0px;
@@ -212,6 +189,15 @@ export default {
     font-size: 12px;
     margin-top: -10px;
     }
+.cedit {
+    padding: 0;
+    margin-left: -15px;
+}
+.ceditv2 {
+    padding: 0;
+    margin-left: 10px;
+}
+
 @media (max-width: 600px) {
     .coledit{
       width: 100%;
@@ -221,6 +207,14 @@ export default {
     }
     .wid100 {
         width: 218%;
+    }
+    .cedit {
+        margin-left: 0px;
+        padding: 5px;
+    }
+    .ceditv2 {
+        padding: 5px;
+        margin-left: 0px;
     }
 }
 </style>

@@ -125,7 +125,7 @@ export default {
           head3: "Контакты",
           head4: "Подписывайтесь на обновления",
           iconItems: [
-              {id: 1, icon: "ins", link: "https://www.instagram.com/acrylplatformofficial/", click: "Submit_IG"},
+              {id: 1, icon: "ins", link: "https://www.instagram.com/acryl_official/", click: "Submit_IG"},
               {id: 2, icon: "fb", link: "https://www.facebook.com/acrylplatformofficial", click: "Submit_FB"},
               {id: 3, icon: "tw", link: "https://twitter.com/acrylplatform", click: "Submit_TW"},
               {id: 4, icon: "vk", link: "https://vk.com/acrylplatform", click: "Submit_VK"},

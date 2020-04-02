@@ -4,6 +4,7 @@
             <v-row class="height100">
                 <v-col cols="12" sm="12">
                     <h2 class="headSection pb-3 secondaryColor" align="left">{{headSection}}</h2>
+                    <v-switch class="mswi" style="margin-left: 84%" v-model="switch2" :label="`${switch2t.toString()}`"></v-switch>
                     <v-expansion-panels accordion value="1" flat class="px-0">
                         <v-expansion-panel v-for="(item, i) in answers" :key="`answer${i}`" active-class="active-primary" >
                             <v-expansion-panel-header class="px-2 elevation-2" >{{item.text}}</v-expansion-panel-header>
@@ -18,35 +19,37 @@
                         </v-expansion-panel>
                     </v-expansion-panels>
 
-                    <details id="details">
-                                            <v-expansion-panels accordion value="1" flat class="px-0">
-                                                <v-expansion-panel v-for="(item, i) in answersv3" :key="`answer${i}`" active-class="active-primary" >
-                                                    <v-expansion-panel-header class="px-0 elevation-2" >{{item.text}}</v-expansion-panel-header>
-                                                    <v-expansion-panel-content class="px-0">
-                                                        <div class="contentAnswer">
-                                                            <v-card class="mx-auto pa-2">
-                                                                <span class="phoneAnswer" v-html="item.answer"></span>
-                                                                <a class="phoneAnswer" v-if="item.phone" :href="`tel:${addressItems.numberLink}`">{{addressItems.number}}</a>
-                                                            </v-card>
-                                                        </div>
-                                                    </v-expansion-panel-content>
-                                                </v-expansion-panel>
-                                            </v-expansion-panels>
-                    </details>
+                    <div  v-if="switch2 === true">
 
-
+                    <v-expansion-panels accordion value="1" flat class="px-0">
+                        <v-expansion-panel v-for="(item, i) in answersv3" :key="`answer${i}`" active-class="active-primary" >
+                            <v-expansion-panel-header class="px-2 elevation-2" >{{item.text}}</v-expansion-panel-header>
+                            <v-expansion-panel-content class="px-0">
+                                <div class="contentAnswer">
+                                    <v-card class="mx-auto pa-2">
+                                        <span class="phoneAnswer" v-html="item.answer"></span>
+                                        <a class="phoneAnswer" v-if="item.phone" :href="`tel:${addressItems.numberLink}`">{{addressItems.number}}</a>
+                                    </v-card>
+                                </div>
+                            </v-expansion-panel-content>
+                        </v-expansion-panel>
+                    </v-expansion-panels>
+                    </div>
                 </v-col>
             </v-row>
         </v-container>
     </section>
 </template>
-
 <script>
     export default {
         name: 'FaqBlock',
         props: ['addressItems'],
         data(){
             return {
+                    switch1: true,
+                    switch2: false,
+                    switch1t: `Скрыть`,
+                    switch2t: `Показать все вопросы`,
                 headSection: `FAQ`,
                 answers: [
                     {
@@ -57,8 +60,8 @@
                     },
                     {
                         id: 1,
-                        text: `В чем состоит работа майнеров?`,
-                        answer: `Основная суть майнинга сводится к решению сложных вычислительных задач методом подбора единственного правильного хэша, который является криптографическим шифром. Для этого майнеры используют ноды со специальным программным обеспечением, цель которых — подобрать правильный хэш.`,
+                        text: `В чем заключается концепция стейкинга?`,
+                        answer: `Это процесс хранения средств на криптовалютном кошельке для обеспечения поддержки всех операций на блокчейне. По существу, он состоит из блокировки определенного количества криптовалюты для получения вознаграждений. В большинстве случаев этот процесс зависит от пользователей, принимающих участие в осуществлении операций на блокчейне посредством личного криптовалютного кошелька.`,
                         phone: false
                     },
                     {

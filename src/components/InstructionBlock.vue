@@ -19,25 +19,30 @@
                             <div class="round3 nav"></div>
                             <div class="round4 nav"></div>
                             <div class="round5 nav"></div>
-                            <div class="img1 opis " >
-                                <img src="img/an_step_1.jpg"/>
+                            <div class="img1 opis" >
+                                <img class="ini" src="img/an_step_1.jpg"/>
+                                <img class="hii" src="img/an_step_1m.jpg"/>
                             </div>
                             <div class="img2 opis" >
-                                <img src="img/an_step_2.jpg"/>
+                                <img class="ini" src="img/an_step_2.jpg"/>
+                                <img class="hii" src="img/an_step_2m.jpg"/>
                             </div>
                             <div class="img3 opis">
-                                <img src="img/an_step_3.jpg"/>
+                                <img class="ini" src="img/an_step_3.jpg"/>
+                                <img class="hii" src="img/an_step_3m.jpg"/>
                             </div>
                             <div class="img4 opis">
-                                <img src="img/an_step_4.jpg" />
+                                <img class="ini" src="img/an_step_4.jpg" />
+                                <img class="hii" src="img/an_step_4m.jpg"/>
                             </div>
                             <div class="img5 opis">
-                                <img src="img/an_step_5.jpg"/>
+                                <img class="ini" src="img/an_step_5.jpg"/>
+                                <img class="hii" src="img/an_step_5m.jpg"/>
                             </div>
                         </div>
                     </div>
         </v-row>
-                <v-btn rounded color="bauto" href="#targetOffer" align="center" @click="Click_more()">Заказать</v-btn>
+                <v-btn  class="mbtn" rounded color="bauto" href="#targetOffer" align="center" @click="Click_more()">Заказать</v-btn>
     </v-container>
   </section>
 </template>
@@ -113,12 +118,39 @@
     margin-left: 115%;
     margin-top: -40px;
 }
+.hii {
+    visibility: hidden;
+}
+.wrap {
+ max-width: 1280px;
+}
+.mbtn {
+    margin-top: -35%;
+}
 @media (max-width: 600px) {
     .pedit {
         visibility: hidden;
     }
     .bauto {
         margin-left: 36%;
+    }
+    .ini {
+        visibility: hidden;
+    }
+    .hii {
+        visibility: inherit;
+        min-width: 800px;
+        margin-left: -15%;
+    }
+    .mbtn {
+        margin-top: 0%;
+        margin-left: 31%;
+    }
+}
+@media (max-width: 500px) {
+    .hii {
+        min-width: 800px;
+        margin-left: -27%;
     }
 }
 </style>
