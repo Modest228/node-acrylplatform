@@ -108,6 +108,7 @@ export default {
   align-items: center;
   overflow: hidden;
   width: 89px;
+  padding-top: 2px;
   @include respond-to(medium-screens) {width: 220px;}
   .widthMobil{
     height: 18px;

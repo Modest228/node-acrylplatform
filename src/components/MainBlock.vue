@@ -11,7 +11,7 @@
                         <p>
                             Успей приобрести персональный мини
                             <br />дата-центр по старому курсу доллара
-                            <br />до 31 марта!
+                            <br />до 6 апреля!
                         </p>
                     </div>
                     <v-btn rounded href="#targetOffer" @click="Click_more()">Заказать</v-btn>
@@ -154,7 +154,7 @@
     .calc-block {
         .calc-card {
             margin: auto -210px;
-            border-radius: 20px !important;
+            border-radius: 5px !important;
             background: #fbfbfb;
             min-width: 468px;
             max-width: 468px;
@@ -190,6 +190,7 @@
                     height: 42px;
                     margin-bottom: -10px;
                     margin-top: 10px;
+                    background-color: #ffffff;
                 }
                 .formNodeCountSlider {
                     margin-top: -9px;
@@ -210,6 +211,7 @@
                     height: 42px;
                     margin-bottom: -10px;
                     margin-top: 10px;
+                    background-color: #ffffff;
                 }
                 .formNodeCountSlider {
                     margin-top: -7px;
@@ -230,6 +232,7 @@
                     height: 42px;
                     margin-bottom: -10px;
                     margin-top: 10px;
+                    background-color: #ffffff;
                 }
             }
             .checkBoxLabel {
@@ -308,7 +311,8 @@
     }
 
     .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
-        background-color: black;
+        background-color: #202020;
+        border-radius: 5px;
     }
     .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):hover {
         background-color: #3c3c40;
@@ -331,11 +335,14 @@
         }
         .calc-block {
             padding: 100px 12.5%;
+            .calc-card {
+                margin: auto -248px;
+            }
         }
         .imgflow {
             flex-direction: column;
             .btnHeaderBlock {
-                width: 21%;
+                width: 19%;
                 margin-top: 65px;
             }
             .imgHeaderBlock {
@@ -344,5 +351,12 @@
                 position: inherit;
             }
         }
+    }
+    @media (max-height: 670px) {
+.imgflow{
+    .imgHeaderBlock {
+        background-position: top right 33%;
+    }
+}
     }
 </style>

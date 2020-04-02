@@ -129,13 +129,11 @@ img{
   color: #fff;
   margin: 0;
   margin-bottom: 3px;
-  font-family: Times New Roman;
 }
 .opis  p{
   color: #fff;
   margin: 0;
   font-size: 14px;
-  font-family: Times New Roman;
 }
 /*========пауза в анимации при наведении на слайд=========*/
 .slider:hover .opis{
@@ -151,7 +149,7 @@ img{
   width: 25px;
   height: 25px;
   background: transparent;
-  bottom: 24px;
+  bottom: 58%;
   left: 50%;
   right: 10px;
   text-align: center;
@@ -184,18 +182,21 @@ img{
   margin-left: 38%;
 
 }
+.t1, .t2, .t3, .t4, .t5{
+  color: #f1d20d;
+}
+
 .round1, .round2, .round3, .round4, .round5{
   position: absolute;
   width: 25px;
   height: 25px;
-  background:   #fff;
-  bottom: 24px;
+  background: #202020;
+  bottom: 58%;
   left: 50%;
   right: 10px;
   text-align: center;
   cursor: pointer;
   z-index: 999;
-  box-shadow: -1px -1px 1px 1px rgba(0,0,0, 0.5);
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
@@ -226,36 +227,73 @@ img{
   -moz-animation: butAnim 30s linear infinite;
   -o-animation: butAnim 30s linear infinite;
 }
+.t1 {
+  animation: tAnim 30s linear infinite;
+  -webkit-animation: tAnim 30s linear infinite;
+  -moz-animation: tAnim 30s linear infinite;
+  -o-animation: tAnim 30s linear infinite;
+}
 .round2{
   animation: butAnim 30s linear 6s infinite;
   -webkit-animation: butAnim 30s linear 6s infinite;
   -moz-animation: butAnim 30s linear 6s infinite;
   -o-animation: butAnim 30s linear 6s infinite;
 }
+.t2 {
+  animation: tAnim 30s linear 6s infinite;
+  -webkit-animation: tAnim 30s linear 6s infinite;
+  -moz-animation: tAnim 30s linear 6s infinite;
+  -o-animation: tAnim 30s linear 6s infinite;
+}
 .round3{
-  animation: butAnim 30s linear 12s infinite;
+  animation: butAnim,tanim 30s linear 12s infinite;
   -webkit-animation: butAnim 30s linear 12s infinite;
   -moz-animation: butAnim 30s linear 12s infinite;
   -o-animation: butAnim 30s linear 12s infinite;
 }
+.t3 {
+  animation: tAnim 30s linear 12s infinite;
+  -webkit-animation: tAnim 30s linear 12s infinite;
+  -moz-animation: tAnim 30s linear 12s infinite;
+  -o-animation: tAnim 30s linear 12s infinite;
+}
 .round4{
-  animation: butAnim 30s linear 18s infinite;
+  animation: butAnim,tanim 30s linear 18s infinite;
   -webkit-animation: butAnim 30s linear 18s infinite;
   -moz-animation: butAnim 30s linear 18s infinite;
   -o-animation: butAnim 30s linear 18s infinite;
 }
+.t4 {
+  animation: tAnim 30s linear 18s infinite;
+  -webkit-animation: tAnim 30s linear 18s infinite;
+  -moz-animation: tAnim 30s linear 18s infinite;
+  -o-animation: tAnim 30s linear 18s infinite;
+}
 .round5{
-  animation: butAnim 30s linear 24s infinite;
+  animation: butAnim,tanim 30s linear 24s infinite;
   -webkit-animation: butAnim 30s linear 24s infinite;
   -moz-animation: butAnim 30s linear 24s infinite;
   -o-animation: butAnim 30s linear 24s infinite;
 }
+.t5 {
+  animation: tAnim 30s linear 24s infinite;
+  -webkit-animation: tAnim 30s linear 24s infinite;
+  -moz-animation: tAnim 30s linear 24s infinite;
+  -o-animation: tAnim 30s linear 24s infinite;
+}
 @keyframes butAnim {
-  0% {background-color: #fff;}
-  8% {background-color: #fff;}
+  0% {background-color: #202020;}
+  8% {background-color: #202020;}
   17% {background-color: #fedd0e;}
-  25% {background-color: #fff;}
-  100% {background-color: #fff;}
+  25% {background-color: #202020;}
+  100% {background-color: #202020;}
+}
+@keyframes tAnim {
+  0% {color: #fedd0e;}
+  8% {color: #fedd0e;}
+  17% {color: #202020;}
+  25% {color: #fedd0e;}
+  100% {color: #fedd0e;}
 }
 @-webkit-keyframes butAnim {
   0% {background-color: #fff;}
@@ -310,12 +348,39 @@ img{
 }
 
 @media only screen and (max-width:740px) {
-  .opis p{
+  .opis p {
     display: none;
   }
-  .opis h3{
+  .opis h3 {
     font-size: 14px;
     text-align: center;
   }
 }
+  @media  (max-width:740px) {
+    .round5 {
+      margin-left: -10%;
+    }
+    .but5 {
+      margin-left: -10%;
+    }
+    .round4 {
+      margin-left: -19%;
+    }
+    .but4 {
+      margin-left: -19%;
+    }
+    .round3 {
+      margin-left: -29%;
+    }
+    .but3 {
+      margin-left: -29%;
+    }
+    .round2 {
+      margin-left: -39%;
+    }
+    .but2 {
+      margin-left: -39%;
+    }
+  }
+
 

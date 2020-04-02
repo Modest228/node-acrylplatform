@@ -9,35 +9,40 @@
                     <div class="wrap">
                         <div class="slider">
                             <v-col class="elevation-1 colpos"></v-col>
-                            <div class="but1" tabindex="1"><p>1</p><p  class="pedit">Заказать</p></div>
-                            <div class="but2" tabindex="1"><p>2</p><p class="pedit">Подключить</p></div>
-                            <div class="but3" tabindex="1"><p>3</p><p class="pedit">Установить</p></div>
-                            <div class="but4" tabindex="1"><p>4</p><p class="pedit">Заработать</p></div>
-                            <div class="but5" tabindex="1"><p>5</p><p class="pedit">Вывести</p></div>
+                            <div class="but1" tabindex="1"><p class="t1">1</p><p  class="pedit">Заказать</p></div>
+                            <div class="but2" tabindex="1"><p class="t2">2</p><p class="pedit">Подключить</p></div>
+                            <div class="but3" tabindex="1"><p class="t3">3</p><p class="pedit">Установить</p></div>
+                            <div class="but4" tabindex="1"><p class="t4">4</p><p class="pedit">Заработать</p></div>
+                            <div class="but5" tabindex="1"><p class="t5">5</p><p class="pedit">Вывести</p></div>
                             <div class="round1 nav"></div>
                             <div class="round2 nav"></div>
                             <div class="round3 nav"></div>
                             <div class="round4 nav"></div>
                             <div class="round5 nav"></div>
-                            <div class="img1 opis " >
-                                <img src="img/an_step_1.jpg"/>
+                            <div class="img1 opis" >
+                                <img class="ini" src="img/an_step_1.jpg"/>
+                                <img class="hii" src="img/an_step_1m.jpg"/>
                             </div>
                             <div class="img2 opis" >
-                                <img src="img/an_step_2.jpg"/>
+                                <img class="ini" src="img/an_step_2.jpg"/>
+                                <img class="hii" src="img/an_step_2m.jpg"/>
                             </div>
                             <div class="img3 opis">
-                                <img src="img/an_step_3.jpg"/>
+                                <img class="ini" src="img/an_step_3.jpg"/>
+                                <img class="hii" src="img/an_step_3m.jpg"/>
                             </div>
                             <div class="img4 opis">
-                                <img src="img/an_step_4.jpg" />
+                                <img class="ini" src="img/an_step_4.jpg" />
+                                <img class="hii" src="img/an_step_4m.jpg"/>
                             </div>
                             <div class="img5 opis">
-                                <img src="img/an_step_5.jpg"/>
+                                <img class="ini" src="img/an_step_5.jpg"/>
+                                <img class="hii" src="img/an_step_5m.jpg"/>
                             </div>
                         </div>
                     </div>
         </v-row>
-                <v-btn rounded color="bauto" href="#targetOffer" align="center" @click="Click_more()">Заказать</v-btn>
+                <v-btn  class="mbtn" rounded color="bauto" href="#targetOffer" align="center" @click="Click_more()">Заказать</v-btn>
     </v-container>
   </section>
 </template>
@@ -113,12 +118,39 @@
     margin-left: 115%;
     margin-top: -40px;
 }
+.hii {
+    visibility: hidden;
+}
+.wrap {
+ max-width: 1280px;
+}
+.mbtn {
+    margin-top: -35%;
+}
 @media (max-width: 600px) {
     .pedit {
         visibility: hidden;
     }
     .bauto {
         margin-left: 36%;
+    }
+    .ini {
+        visibility: hidden;
+    }
+    .hii {
+        visibility: inherit;
+        min-width: 800px;
+        margin-left: -15%;
+    }
+    .mbtn {
+        margin-top: 0%;
+        margin-left: 31%;
+    }
+}
+@media (max-width: 500px) {
+    .hii {
+        min-width: 800px;
+        margin-left: -27%;
     }
 }
 </style>

@@ -26,7 +26,7 @@
               <v-divider></v-divider>
           </div>
           <div class="bottomBlock">
-            <v-divider></v-divider>
+            <v-divider style="margin-top: -1px"></v-divider>
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title class="title">
@@ -38,7 +38,7 @@
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title class="title">
-                  <v-btn rounded small href="#targetOffer">Заказать</v-btn>
+                  <v-btn style="border-radius: 3px; height: 36px;" rounded small href="#targetOffer">Заказать</v-btn>
                 </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
