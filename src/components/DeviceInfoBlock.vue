@@ -10,9 +10,6 @@
                     <div class="advantagesBlock">
 
                             <v-row>
-                            <!--<v-col v-for="(item, i) in advantages" :key="`advantageItem${i}`" :class="`advantageItem ch grid${item.id}`">-->
-                                <!--<span class="describe">{{item.describe}}</span>-->
-                            <!--</v-col>-->
 
                                     <v-col cols="12" md="6" class="cedit">
                                         <v-card class="coledit" style="margin-bottom: 10px;"><v-col>
