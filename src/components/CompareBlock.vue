@@ -35,7 +35,7 @@
                     <td>298 x 175 x 304 мм</td>
                 </tr>
                 <tr class="feditmob">
-                    <td>Участие в pool / Пониманимание протоколов</td>
+                    <td>Участие в pool / Понимание протоколов</td>
                     <td class="tdb">Нет</td>
                     <td>Да</td>
                 </tr>
