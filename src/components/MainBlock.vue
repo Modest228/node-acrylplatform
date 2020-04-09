@@ -14,7 +14,7 @@
                             <br />до 10 апреля!
                         </p>
                     </div>
-                    <v-btn rounded href="#targetOffer" @click="Click_more()">Заказать</v-btn>
+                    <v-btn rounded href="#targetOffer" @click="Click_more()">Узнать подробнее</v-btn>
                 </div>
             </v-col>
         </v-row>
@@ -82,12 +82,17 @@
                         </v-col>
                     </v-row>
                     <v-row>
-                        <v-col cols="12" class="checkBoxInput">
+                        <v-col style="font-size: 9px" class="checkBoxInput">
                             <v-checkbox
                                     class="fsize"
                                     v-model="checkBoxInput"
                                     :label="`${checkBoxLabel.toString()}`"
                             ></v-checkbox>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col cols="12" class="formNodeCount">
+                          <div>*Это гипотетическая модель, а не прогноз производительности. В ней не учитываются сборы или налоги. Фактическая доходность может быть больше или меньше, чем указано выше.</div>
                         </v-col>
                     </v-row>
                 </v-container>
