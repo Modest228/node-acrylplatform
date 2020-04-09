@@ -57,7 +57,7 @@ export default {
   name: 'FormBlock',
   data(){
       return {
-            headSection: `Заказать ACRYL Node`,
+            headSection: `Получить консультацию`,
             valid: false,
             name: '',
             phone: '',
