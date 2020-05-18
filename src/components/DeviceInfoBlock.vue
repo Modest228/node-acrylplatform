@@ -45,13 +45,13 @@
                                <div class="but2 bgbutton2" tabindex="1"></div>
                                <div class="but3 bgbutton3" tabindex="1"></div>
                                <div class="img1" >
-                                   <img src="img/node_1.jpg"/>
+                                   <img alt="node1" src="img/node_1.jpg"/>
                                </div>
                                <div class="img2" >
-                                   <img src="img/node_2.jpg"/>
+                                   <img alt="node2" src="img/node_2.jpg"/>
                                </div>
                                <div class="img3">
-                                   <img src="img/node_3.jpg"/>
+                                   <img alt="node3" src="img/node_3.jpg"/>
                                </div>
                            </div>
                             </v-row>
