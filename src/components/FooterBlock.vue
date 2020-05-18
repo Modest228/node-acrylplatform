@@ -63,7 +63,7 @@
                 <v-col cols='12' sm='6' lg='3' class="iconwieght">
                     <div class="social">
                         <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`"> 
-                            <img alt="icon" :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
+                            <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
                         </a>
                     </div>
                 </v-col>
