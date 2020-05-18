@@ -22,19 +22,19 @@
 
                     <v-col>
                         <div class="img1 opis" >
-                            <img src="img/an_step_1.jpg"/>
+                            <img alt="step1" src="img/an_step_1.jpg"/>
                         </div>
                         <div class="img2 opis" >
-                            <img src="img/an_step_2.jpg"/>
+                            <img alt="step2" src="img/an_step_2.jpg"/>
                         </div>
                         <div class="img3 opis">
-                            <img src="img/an_step_3.jpg"/>
+                            <img alt="step3" src="img/an_step_3.jpg"/>
                         </div>
                         <div class="img4 opis">
-                            <img src="img/an_step_4.jpg"/>
+                            <img alt="step4" src="img/an_step_4.jpg"/>
                         </div>
                         <div class="img5 opis">
-                            <img src="img/an_step_5.jpg"/>
+                            <img  alt="step5" src="img/an_step_5.jpg"/>
                         </div>
                     </v-col>
                 </div>

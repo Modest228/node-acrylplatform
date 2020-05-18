@@ -9,7 +9,7 @@
                             :key="`direction${i}`" 
                             :href="`${direction.link}`" 
                             target="_blank"
-                            @click="`${SubmitBTN(direction.click)}`"><img  :src="`/img/directions/${direction.img}.svg`"></a>
+                            @click="`${SubmitBTN(direction.click)}`"><img alt="allimages" :src="`/img/directions/${direction.img}.svg`"></a>
                     </div>
                 </v-col>
                 <v-col cols='12' sm='6' lg='3'>
@@ -51,7 +51,7 @@
             <v-row class="bottomFooterBlock">
                 <v-col cols='12' sm='6' lg='3'>
                     <div class="directions mweight">
-                        <a href="#topTarget"><img class="mimg" src="/img/directions/acryl-logo-white.svg"></a>
+                        <a href="#topTarget"><img  alt="acryllogo" class="mimg" src="/img/directions/acryl-logo-white.svg"></a>
                     </div>
                 </v-col>
                 <v-col cols='12' sm='6' lg='3'>
@@ -63,7 +63,7 @@
                 <v-col cols='12' sm='6' lg='3' class="iconwieght">
                     <div class="social">
                         <a v-for="(item, i) in iconItems" :key="`iconSocial${i}`" :href="`${item.link}`" target="_blank" rel="noreferrer noopener" @click="`${SubmitBTN(item.click)}`"> 
-                            <img :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
+                            <img alt="icon" :src="`/img/social/icon_social_${item.icon}.svg`" :alt="`${item.icon}`">
                         </a>
                     </div>
                 </v-col>

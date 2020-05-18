@@ -20,24 +20,24 @@
                             <div class="round4 nav"></div>
                             <div class="round5 nav"></div>
                             <div class="img1 opis" >
-                                <img class="ini" src="img/an_step_1.jpg"/>
-                                <img class="hii" src="img/an_step_5m.jpg"/>
+                                <img alt="step1" class="ini" src="img/an_step_1.jpg"/>
+                                <img alt="step1m" class="hii" src="img/an_step_5m.jpg"/>
                             </div>
                             <div class="img2 opis" >
-                                <img class="ini" src="img/an_step_2.jpg"/>
-                                <img class="hii" src="img/an_step_2m.jpg"/>
+                                <img alt="step2" class="ini" src="img/an_step_2.jpg"/>
+                                <img alt="step2m" class="hii" src="img/an_step_2m.jpg"/>
                             </div>
                             <div class="img3 opis">
-                                <img class="ini" src="img/an_step_3.jpg"/>
-                                <img class="hii" src="img/an_step_4m.jpg"/>
+                                <img alt="step3" class="ini" src="img/an_step_3.jpg"/>
+                                <img alt="step3m" class="hii" src="img/an_step_4m.jpg"/>
                             </div>
                             <div class="img4 opis">
-                                <img class="ini" src="img/an_step_4.jpg" />
-                                <img class="hii" src="img/an_step_3m.jpg"/>
+                                <img alt="step4" class="ini" src="img/an_step_4.jpg" />
+                                <img alt="step4m" class="hii" src="img/an_step_3m.jpg"/>
                             </div>
                             <div class="img5 opis">
-                                <img class="ini" src="img/an_step_5.jpg"/>
-                                <img class="hii" src="img/an_step_1m.jpg"/>
+                                <img alt="step5" class="ini" src="img/an_step_5.jpg"/>
+                                <img alt="step5m" class="hii" src="img/an_step_1m.jpg"/>
                             </div>
                         </div>
                     </div>

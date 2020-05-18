@@ -14,8 +14,8 @@
                         <ul class="py-0 secondaryColor"><li>{{textSection_5}}</li></ul>
                         <ul class="py-0 secondaryColor"><li>{{textSection_6}}</li></ul>
                         <ul class="py-0 secondaryColor"><li>{{textSection_7}}</li></ul>
-                        <a href="https://play.google.com/store/apps/details?id=com.acrylplatform.client" style=""><img src="/../img/google_play.png" class="googledownload"></a>
-                        <a href="https://apps.apple.com/ru/app/acryl-client/id1457382110"><img src="/../img/app_store.png" class="appstoredownload"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.acrylplatform.client" style=""><img alt="google" src="/../img/google_play.png" class="googledownload"></a>
+                        <a href="https://apps.apple.com/ru/app/acryl-client/id1457382110"><img alt="appstore" src="/../img/app_store.png" class="appstoredownload"></a>
                     </div>
                 </v-col>
                 <v-col cols="12" sm="5">
